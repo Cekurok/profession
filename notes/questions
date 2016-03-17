@@ -33,7 +33,9 @@ when same static variable name is declared in many function with same name
 07. virtual constructor possible
 08. virtual destrcutor possible
 09. size of derived class when base class private members
-10. 
+10. copy constructor
+11. deep and shallow copy
+
 
 
 
@@ -109,7 +111,46 @@ mask will you use?
 03. user defined atoi function
 04. user defined function convert a string to double precision atof 
 05. user defined string copy function
-
+06. Find the element that appears once
+07. Detect opposite signs
+08. Set bits in all numbers from 1 to n
+09. Swap bits
+10. Add two numbers
+11. Smallest of three
+12. A Boolean Array Puzzle
+13. Set bits in an (big) array
+14. Next higher number with same number of set bits
+15. Optimization Technique (Modulus)
+16. Add 1 to a number
+17. Multiply with 3.5
+18. Turn off the rightmost set bit
+19. Check for Power of 4
+20. Absolute value (abs) without branching
+21. Modulus division by a power-of-2-number
+22. Minimum or Maximum of two integers 
+23. Rotate bits
+24. Find the two non-repeating elements in an array
+25. Number Occurring Odd Number of Times
+26. Check for Integer Overflow
+27. Little and Big Endian
+28. Reverse Bits of a Number
+29. Count set bits in an integer
+30. Number of bits to be flipped to convert A to B
+31. Next Power of 2
+32. Check if a Number is Multiple of 3
+33. Find parity
+34. Multiply with 7
+35. Find whether a no is power of two
+36. Position of rightmost set bit
+37. Binary representation of a given number
+38. Swap all odd and even bits
+39. Find position of the only set bit
+40. Karatsuba algorithm for fast multiplication
+41. How to swap two numbers without using a temporary variable?
+42. Check if a number is multiple of 9 using bitwise operators
+43. Swap two nibbles in a byte
+44. How to turn off a particular bit in a number?
+45. Check if binary representation of a number is palindrome
 
 
 **********************************************************************

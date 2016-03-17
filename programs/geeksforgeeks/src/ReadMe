@@ -1,0 +1,43 @@
+--> Searching and Sorting
+program0001 - Binary Search
+program0002 - Selection Sort
+program0003 - Bubble Sort
+program0004 - Insertion Sort
+program0005 - Merge Sort
+program0006 - Heap Sort
+program0007 - QuickSort
+program0008 - Radix Sort
+program0009 - Counting Sort
+program0010 - Bucket Sort
+program0011 - ShellSort
+program0012 - Comb Sort
+program00    Pigeonhole Sort
+program00    Interpolation search vs Binary search
+program00    Stability in sorting algorithms
+program00    When does the worst case of Quicksort occur?
+program00    Lower bound for comparison based sorting algorithms
+program00    Which sorting algorithm makes minimum number of memory writes?
+program00    Find the Minimum length Unsorted Subarray, sorting which makes the complete array sorted
+program00    Merge Sort for Linked Lists
+program00    Sort a nearly sorted (or K sorted) array
+program00    Iterative Quick Sort
+program00    QuickSort on Singly Linked List
+program00    QuickSort on Doubly Linked List
+program00    Find k closest elements to a given value
+program00    Sort n numbers in range from 0 to n^2 – 1 in linear time
+program00    A Problem in Many Binary Search Implementations
+program00    Search in an almost sorted array
+program00    Sort an array in wave form
+program00    Why is Binary Search preferred over Ternary Search?
+program00    K’th Smallest/Largest Element in Unsorted Array
+program00    K’th Smallest/Largest Element in Unsorted Array in Expected Linear Time
+program00    K’th Smallest/Largest Element in Unsorted Array in Worst Case Linear Time
+program00    Find the closest pair from two sorted arrays
+program00    Find common elements in three sorted arrays
+program00    Given a sorted array and a number x, find the pair in array whose sum is closest to x
+program00    Count 1’s in a sorted binary array
+program00    Binary Insertion Sort
+program00    Insertion Sort for Singly Linked List
+program00    Why Quick Sort preferred for Arrays and Merge Sort for Linked Lists?
+program00    Merge Sort for Doubly Linked List
+
