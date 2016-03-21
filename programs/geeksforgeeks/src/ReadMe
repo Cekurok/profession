@@ -11,33 +11,719 @@ program0009 - Counting Sort
 program0010 - Bucket Sort
 program0011 - ShellSort
 program0012 - Comb Sort
-program00    Pigeonhole Sort
-program00    Interpolation search vs Binary search
-program00    Stability in sorting algorithms
-program00    When does the worst case of Quicksort occur?
-program00    Lower bound for comparison based sorting algorithms
-program00    Which sorting algorithm makes minimum number of memory writes?
-program00    Find the Minimum length Unsorted Subarray, sorting which makes the complete array sorted
-program00    Merge Sort for Linked Lists
-program00    Sort a nearly sorted (or K sorted) array
-program00    Iterative Quick Sort
-program00    QuickSort on Singly Linked List
-program00    QuickSort on Doubly Linked List
-program00    Find k closest elements to a given value
-program00    Sort n numbers in range from 0 to n^2 – 1 in linear time
-program00    A Problem in Many Binary Search Implementations
-program00    Search in an almost sorted array
-program00    Sort an array in wave form
-program00    Why is Binary Search preferred over Ternary Search?
-program00    K’th Smallest/Largest Element in Unsorted Array
-program00    K’th Smallest/Largest Element in Unsorted Array in Expected Linear Time
-program00    K’th Smallest/Largest Element in Unsorted Array in Worst Case Linear Time
-program00    Find the closest pair from two sorted arrays
-program00    Find common elements in three sorted arrays
-program00    Given a sorted array and a number x, find the pair in array whose sum is closest to x
-program00    Count 1’s in a sorted binary array
-program00    Binary Insertion Sort
-program00    Insertion Sort for Singly Linked List
-program00    Why Quick Sort preferred for Arrays and Merge Sort for Linked Lists?
-program00    Merge Sort for Doubly Linked List
+program0013 - Pigeonhole Sort
+program0014 - Interpolation search vs Binary search
+program0015 - Stability in sorting algorithms
+program0016 - When does the worst case of Quicksort occur?
+program0017 - Lower bound for comparison based sorting algorithms
+program0018 - Which sorting algorithm makes minimum number of memory writes?
+program0019 - Find the Minimum length Unsorted Subarray, sorting which makes the complete array sorted
+program0020 - Merge Sort for Linked Lists
+program0021 - Sort a nearly sorted (or K sorted) array
+program0022 - Iterative Quick Sort
+program0023 - QuickSort on Singly Linked List
+program0024 - QuickSort on Doubly Linked List
+program0025 - Find k closest elements to a given value
+program0026 - Sort n numbers in range from 0 to n^2 – 1 in linear time
+program0027 - A Problem in Many Binary Search Implementations
+program0028 - Search in an almost sorted array
+program0029 - Sort an array in wave form
+program0030 - Why is Binary Search preferred over Ternary Search?
+program0031 - K’th Smallest/Largest Element in Unsorted Array
+program0032 - K’th Smallest/Largest Element in Unsorted Array in Expected Linear Time
+program0033 - K’th Smallest/Largest Element in Unsorted Array in Worst Case Linear Time
+program0034 - Find the closest pair from two sorted arrays
+program0035 - Find common elements in three sorted arrays
+program0036 - Given a sorted array and a number x, find the pair in array whose sum is closest to x
+program0037 - Count 1’s in a sorted binary array
+program0038 - Binary Insertion Sort
+program0039 - Insertion Sort for Singly Linked List
+program0040 - Why Quick Sort preferred for Arrays and Merge Sort for Linked Lists?
+program0041 - Merge Sort for Doubly Linked List
+
+--> Greedy Algorithms:
+programa0001 - Activity Selection Problem
+programa0002 - Kruskal’s Minimum Spanning Tree Algorithm
+programa0003 - Huffman Coding
+programa0004 - Efficient Huffman Coding for Sorted Input
+programa0005 - Prim’s Minimum Spanning Tree Algorithm
+programa0006 - Prim’s MST for Adjacency List Representation
+programa0007 - Dijkstra’s Shortest Path Algorithm
+programa0008 - Dijkstra’s Algorithm for Adjacency List Representation
+programa0009 - Job Sequencing Problem
+programa0010 - Greedy Algorithm to find Minimum number of Coins
+programa0011 - K Centers Problem
+
+--> Dynamic Programming:
+programb0001 - Overlapping Subproblems Property
+programb0002 - Optimal Substructure Property
+programb0003 - Longest Increasing Subsequence
+programb0004 - Longest Common Subsequence
+programb0005 - Edit Distance
+programb0006 - Min Cost Path
+programb0007 - Coin Change
+programb0008 - Matrix Chain Multiplication
+programb0009 - Binomial Coefficient
+programb0010 - 0-1 Knapsack Problem
+programb0011 - Egg Dropping Puzzle
+programb0012 - Longest Palindromic Subsequence
+programb0013 - Cutting a Rod
+programb0014 - Maximum Sum Increasing Subsequence
+programb0015 - Longest Bitonic Subsequence
+programb0016 - Floyd Warshall Algorithm
+programb0017 - Palindrome Partitioning
+programb0018 - Partition problem
+programb0019 - Word Wrap Problem
+programb0020 - Maximum Length Chain of Pairs
+programb0021 - Variations of LIS
+programb0022 - Box Stacking Problem
+programb0023 - Program for Fibonacci numbers
+programb0024 - Minimum number of jumps to reach end
+programb0025 - Maximum size square sub-matrix with all 1s
+programb0026 - Ugly Numbers
+programb0027 - Largest Sum Contiguous Subarray
+programb0028 - Longest Palindromic Substring
+programb0029 - Bellman–Ford Algorithm for Shortest Paths
+programb0030 - Optimal Binary Search Tree
+programb0031 - Largest Independent Set Problem
+programb0032 - Subset Sum Problem
+programb0033 - Maximum sum rectangle in a 2D matrix
+programb0034 - Count number of binary strings without consecutive 1?s
+programb0035 - Boolean Parenthesization Problem
+programb0036 - Count ways to reach the n’th stair
+programb0037 - Minimum Cost Polygon Triangulation
+programb0038 - Mobile Numeric Keypad Problem
+programb0039 - Count of n digit numbers whose sum of digits equals to given sum
+programb0040 - Minimum Initial Points to Reach Destination
+programb0041 - Total number of non-decreasing numbers with n digits
+programb0042 - Find length of the longest consecutive path from a given starting character
+programb0043 - Tiling Problem
+programb0044 - Minimum number of squares whose sum equals to given number n
+programb0045 - Find minimum number of coins that make a given value
+programb0046 - Collect maximum points in a grid using two traversals
+programb0047 - Shortest Common Supersequence
+programb0048 - Compute sum of digits in all numbers from 1 to n
+programb0049 - Count possible ways to construct buildings
+programb0050 - Maximum profit by buying and selling a share at most twice
+programb0051 - How to print maximum number of A’s using given four keys
+programb0052 - Find the minimum cost to reach destination using a train
+programb0053 - Vertex Cover Problem | Set 2 (Dynamic Programming Solution for Tree)
+programb0054 - Count number of ways to reach a given score in a game
+programb0055 - Weighted Job Scheduling
+programb0056 - Longest Even Length Substring such that Sum of First and Second Half is same
+programb0057 - Minimum Cost Polygon Triangulation
+
+--> Pattern Searching:
+programc0001 - Naive Pattern Searching
+programc0002 - KMP Algorithm
+programc0003 - Rabin-Karp Algorithm
+programc0004 - A Naive Pattern Searching Question
+programc0005 - Finite Automata
+programc0006 - Efficient Construction of Finite Automata
+programc0007 - Boyer Moore Algorithm – Bad Character Heuristic
+programc0008 - Suffix Array
+programc0009 - Anagram Substring Search (Or Search for all permutations)
+programc0010 - Pattern Searching using a Trie of all Suffixes
+programc0011 - Manacher’s Algorithm – Linear Time Longest Palindromic Substring – Part 1, Part 2, Part 3, Part 4
+programc0012 - Longest Even Length Substring such that Sum of First and Second Half is same
+programc0013 - Print all possible strings that can be made by placing spaces
+programc0014 - Print all permutations of a given string
+programc0015 - The Knight’s tour problem
+programc0016 - Rat in a Maze
+programc0017 - N Queen Problem
+programc0018 - Subset Sum
+programc0019 - m Coloring Problem
+programc0020 - Hamiltonian Cycle
+programc0021 - Sudoku
+programc0022 - Tug of War
+programc0023 - Solving Cryptarithmetic Puzzles
+programc0024 - Write your own pow(x, n) to calculate x*n
+programc0025 - Median of two sorted arrays
+programc0026 - Count Inversions
+programc0027 - Closest Pair of Points
+programc0028 - Strassen’s Matrix Multiplication
+programc0029 - Closest Pair of Points | O(nlogn) Implementation
+programc0030 - How to check if two given line segments intersect?
+programc0031 - How to check if a given point lies inside or outside a polygon?
+programc0032 - Convex Hull | Set 1 (Jarvis’s Algorithm or Wrapping)
+programc0033 - Convex Hull | Set 2 (Graham Scan)
+programc0034 - Given n line segments, find if any two segments intersect
+programc0035 - Check whether a given point lies inside a triangle or not
+programc0036 - How to check if given four points form a square
+
+--> Mathematical Algorithms:
+programd0001 - Write an Efficient Method to Check if a Number is Multiple of 3
+programd0002 - Efficient way to multiply with 7
+programd0003 - Write a C program to print all permutations of a given string
+programd0004 - Lucky Numbers
+programd0005 - Write a program to add two numbers in base 14
+programd0006 - Babylonian method for square root
+programd0007 - Multiply two integers without using multiplication, division and bitwise operators, and no loops
+programd0008 - Print all combinations of points that can compose a given number
+programd0009 - Write you own Power without using multiplication(*) and division(/) operators
+programd0010 - Program for Fibonacci numbers
+programd0011 - Average of a stream of numbers
+programd0012 - Count numbers that don’t contain 3
+programd0013 - MagicSquare
+programd0014 - Sieve of Eratosthenes
+programd0015 - Find day of the week for a given date
+programd0016 - DFA based division
+programd0017 - Generate integer from 1 to 7 with equal probability
+programd0018 - Given a number, find the next smallest palindrome
+programd0019 - Make a fair coin from a biased coin
+programd0020 - Check divisibility by 7
+programd0021 - Find the largest multiple of 3
+programd0022 - Lexicographic rank of a string
+programd0023 - Print all permutations in sorted (lexicographic) order
+programd0024 - Shuffle a given array
+programd0025 - Space and time efficient Binomial Coefficient
+programd0026 - Reservoir Sampling
+programd0027 - Pascal’s Triangle
+programd0028 - Select a random number from stream, with O(1) space
+programd0029 - Find the largest multiple of 2, 3 and 5
+programd0030 - Efficient program to calculate e^x
+programd0031 - Measure one litre using two vessels and infinite water supply
+programd0032 - Efficient program to print all prime factors of a given number
+programd0033 - Print all possible combinations of r elements in a given array of size n
+programd0034 - Random number generator in arbitrary probability distribution fashion
+programd0035 - How to check if a given number is Fibonacci number?
+programd0036 - Russian Peasant Multiplication
+programd0037 - Count all possible groups of size 2 or 3 that have sum as multiple of 3
+programd0038 - Tower of Hanoi
+programd0039 - Horner’s Method for Polynomial Evaluation
+programd0040 - Count trailing zeroes in factorial of a number
+programd0041 - Program for nth Catalan Number
+programd0042 - Generate one of 3 numbers according to given probabilities
+programd0043 - Find Excel column name from a given column number
+programd0044 - Find next greater number with same set of digits
+programd0045 - Count Possible Decodings of a given Digit Sequence
+programd0046 - Calculate the angle between hour hand and minute hand
+programd0047 - Count number of binary strings without consecutive 1?s
+programd0048 - Find the smallest number whose digits multiply to a given number n
+programd0049 - Draw a circle without floating point arithmetic
+programd0050 - How to check if an instance of 8 puzzle is solvable?
+programd0051 - Birthday Paradox
+programd0052 - Multiply two polynomials
+programd0053 - Count Distinct Non-Negative Integer Pairs (x, y) that Satisfy the Inequality x*x + y*y < n
+programd0054 - Count ways to reach the n’th stair
+programd0055 - Replace all ‘0’ with ‘5’ in an input Integer
+programd0056 - Program to add two polynomials
+programd0057 - Print first k digits of 1/n where n is a positive integer
+programd0058 - Given a number as a string, find the number of contiguous subsequences which recursively add up to 9
+
+--> Bit Algorithms:
+programe0001 - Find the element that appears once
+programe0002 - Detect opposite signs
+programe0003 - Set bits in all numbers from 1 to n
+programe0004 - Swap bits
+programe0005 - Add two numbers
+programe0006 - Smallest of three
+programe0007 - A Boolean Array Puzzle
+programe0008 - Set bits in an (big) array
+programe0009 - Next higher number with same number of set bits
+programe0010 - Optimization Technique (Modulus)
+programe0011 - Add 1 to a number
+programe0012 - Multiply with 3.5
+programe0013 - Turn off the rightmost set bit
+programe0014 - Check for Power of 4
+programe0015 - Absolute value (abs) without branching
+programe0016 - Modulus division by a power-of-2-number
+programe0017 - Minimum or Maximum of two integers 
+programe0018 - Rotate bits
+programe0019 - Find the two non-repeating elements in an array
+programe0020 - Number Occurring Odd Number of Times
+programe0021 - Check for Integer Overflow
+programe0022 - Little and Big Endian
+programe0023 - Reverse Bits of a Number
+programe0024 - Count set bits in an integer
+programe0025 - Number of bits to be flipped to convert A to B
+programe0026 - Next Power of 2
+programe0027 - Check if a Number is Multiple of 3
+programe0028 - Find parity
+programe0029 - Multiply with 7
+programe0030 - Find whether a no is power of two
+programe0031 - Position of rightmost set bit
+programe0032 - Binary representation of a given number
+programe0033 - Swap all odd and even bits
+programe0034 - Find position of the only set bit
+programe0035 - Karatsuba algorithm for fast multiplication
+programe0036 - How to swap two numbers without using a temporary variable?
+programe0037 - Check if a number is multiple of 9 using bitwise operators
+programe0038 - Swap two nibbles in a byte
+programe0039 - How to turn off a particular bit in a number?
+programe0040 - Check if binary representation of a number is palindrome
+
+--> Graph Algorithms:
+programf0001 - Graph and its representations
+programf0002 - Breadth First Traversal for a Graph
+programf0003 - Depth First Traversal for a Graph
+programf0004 - Applications of Depth First Search
+programf0005 - Detect Cycle in a Directed Graph
+programf0006 - Detect Cycle in a an Undirected Graph
+programf0007 - Detect cycle in an undirected graph
+programf0008 - Longest Path in a Directed Acyclic Graph
+programf0009 - Topological Sorting
+programf0010 - Check whether a given graph is Bipartite or not
+programf0011 - Snake and Ladder Problem
+programf0012 - Biconnected Components
+programf0013 - Check if a given graph is tree or not
+programf0014 - Prim’s Minimum Spanning Tree (MST))
+programf0015 - Applications of Minimum Spanning Tree Problem
+programf0016 - Prim’s MST for Adjacency List Representation
+programf0017 - Kruskal’s Minimum Spanning Tree Algorithm
+programf0018 - Boruvka’s algorithm for Minimum Spanning Tree
+programf0019 - Dijkstra’s shortest path algorithm
+programf0020 - Dijkstra’s Algorithm for Adjacency List Representation
+programf0021 - Bellman–Ford Algorithm
+programf0022 - Floyd Warshall Algorithm
+programf0023 - Johnson’s algorithm for All-pairs shortest paths
+programf0024 - Shortest Path in Directed Acyclic Graph
+programf0025 - Some interesting shortest path questions
+programf0026 - Shortest path with exactly k edges in a directed and weighted graph
+programf0027 - Find if there is a path between two vertices in a directed graph
+programf0028 - Connectivity in a directed graph
+programf0029 - Articulation Points (or Cut Vertices) in a Graph
+programf0030 - Biconnected graph
+programf0031 - Bridges in a graph
+programf0032 - Eulerian path and circuit
+programf0033 - Fleury’s Algorithm for printing Eulerian Path or Circuit
+programf0034 - Strongly Connected Components
+programf0035 - Transitive closure of a graph
+programf0035 - Find the number of islands
+programf0036 - Count all possible walks from a source to a destination with exactly k edges
+programf0037 - Euler Circuit in a Directed Graph
+programf0038 - Biconnected Components
+programf0039 - Tarjan’s Algorithm to find Strongly Connected Components
+programf0040 - Graph Coloring (Introduction and Applications)
+programf0041 - Greedy Algorithm for Graph Coloring
+programf0042 - Travelling Salesman Problem (Naive and Dynamic Programming)
+programf0043 - Travelling Salesman Problem (Approximate using MST)
+programf0044 - Hamiltonian Cycle
+programf0045 - Vertex Cover Problem (Introduction and Approximate Algorithm)
+programf0046 - K Centers Problem  (Greedy Approximate Algorithm)
+programf0047 - Ford-Fulkerson Algorithm for Maximum Flow Problem
+programf0048 - Find maximum number of edge disjoint paths between two vertices
+programf0049 - Find minimum s-t cut in a flow network
+programf0050 - Maximum Bipartite Matching
+programf0051 - Channel Assignment Problem
+programf0052 - Find if the strings can be chained to form a circle
+programf0053 - Given a sorted dictionary of an alien language, find order of characters
+programf0054 - Karger’s algorithm for Minimum Cut
+programf0055 - Karger’s algorithm for Minimum Cut | Set 2 (Analysis and Applications)
+programf0056 - Hopcroft–Karp Algorithm for Maximum Matching | Set 1 (Introduction)
+programf0057 - Hopcroft–Karp Algorithm for Maximum Matching | Set 2 (Implementation)
+programf0058 - Length of shortest chain to reach a target word
+programf0059 - Find same contacts in a list of contacts
+programf0060 - Linearity of Expectation
+programf0061 - Expected Number of Trials until Success
+programf0062 - Randomized Algorithms | (Introduction and Analysis)
+programf0063 - Randomized Algorithms | Set 2 (Classification and Applications)
+programf0064 - Randomized Algorithms | Set 3 (1/2 Approximate Median)
+programf0065 - Karger’s algorithm for Minimum Cut
+programf0066 - K’th Smallest/Largest Element in Unsorted Array | Set 2 (Expected Linear Time)
+programf0067 - Reservoir Sampling
+programf0068 - Shuffle a given array
+programf0069 - Select a Random Node from a Singly Linked List
+programf0070 - Given a matrix of ‘O’ and ‘X’, find the largest subsquare surrounded by ‘X’
+programf0071 - Nuts & Bolts Problem (Lock & Key problem)
+programf0072 - Flood fill Algorithm – how to implement fill() in paint?
+programf0073 - Given n appointments, find all conflicting appointments
+programf0074 - Check a given sentence for a given set of simple grammer rules
+programf0075 - Find Index of 0 to be replaced with 1 to get longest continuous sequence of 1s in a binary array
+programf0076 - How to check if two given sets are disjoint?
+programf0077 - Minimum Number of Platforms Required for a Railway/Bus Station
+programf0078 - Length of the largest subarray with contiguous elements | Set 1
+programf0079 - Length of the largest subarray with contiguous elements | Set 2
+programf0080 - Print all increasing sequences of length k from first n natural numbers
+programf0081 - Given two strings, find if first string is a subsequence of second
+programf0082 - Snake and Ladder Problem
+programf0083 - Write a function that returns 2 for input 1 and returns 1 for 2
+programf0084 - Connect n ropes with minimum cost
+programf0085 - Find the number of valid parentheses expressions of given length
+programf0086 - Longest Monotonically Increasing Subsequence Size (N log N): Simple implementation
+programf0087 - Generate all binary permutations such that there are more 1’s than 0’s at every point in all permutations
+programf0088 - Lexicographically minimum string rotation
+programf0089 - Construct an array from its pair-sum array
+programf0090 - Program to evaluate simple expressions
+programf0091 - Check if characters of a given string can be rearranged to form a palindrome
+programf0092 - Print all pairs of anagrams in a given array of strings
+
+
+--> Linked List:
+programg0001 - Linked List Insertion
+programg0002 - Linked List Deletion (Deleting a given key)
+programg0003 - Linked List Deletion (Deleting a key at given position)
+programg0004 - Reverse a linked list
+programg0005 - Find Length of a Linked List (Iterative and Recursive)
+programg0006 - How to write C functions that modify head pointer of a Linked List?
+programg0007 - Swap nodes in a linked list without swapping data
+programg0008 - Merge two sorted linked lists
+programg0009 - Merge Sort for Linked Lists
+programg0010 - Reverse a Linked List in groups of given size
+programg0011 - Detect and Remove Loop in a Linked List
+programg0012 - Add two numbers represented by linked lists | Set 1
+programg0013 - Rotate a Linked List
+programg0014 - Generic Linked List in C
+programg0015 - Circular Linked List Introduction and Applications,
+programg0016 - Circular Linked List Traversal
+programg0017 - Split a Circular Linked List into two halves
+programg0018 - Sorted insert for circular linked list
+programg0019 - Doubly Linked List Introduction and Insertion
+programg0020 - Delete a node in a Doubly Linked List
+programg0021 - Reverse a Doubly Linked List
+programg0022 - The Great Tree-List Recursion Problem.
+programg0023 - QuickSort on Doubly Linked List
+programg0024 - Merge Sort for Doubly Linked List
+programg0025 - Infix to Postfix Conversion using Stack
+programg0026 - Evaluation of Postfix Expression
+programg0027 - Reverse a String using Stack
+programg0028 - Implement two stacks in an array
+programg0029 - Check for balanced parentheses in an expression
+programg0030 - Next Greater Element
+programg0031 - Reverse a stack using recursion
+programg0032 - Sort a stack using recursion
+programg0033 - The Stock Span Problem
+programg0034 - Design and Implement Special Stack Data Structure
+programg0035 - Implement Stack using Queues
+programg0036 - Design a stack with operations on middle element
+programg0037 - How to efficiently implement k stacks in a single array?
+programg0038 - Sort a stack using recursion
+programg0039 - Queue Introduction and Array Implementation
+programg0040 - Linked List Implementation of Queue
+programg0041 - Applications of Queue Data Structure
+programg0042 - Priority Queue Introduction
+programg0043 - Deque (Introduction and Applications)
+programg0044 - Implement Queue using Stacks
+programg0045 - Find the first circular tour that visits all petrol pumps
+programg0046 - Maximum of all subarrays of size k
+programg0047 - An Interesting Method to Generate Binary Numbers from 1 to n
+programg0048 - How to efficiently implement k Queues in a single array?
+
+--> Binary Tree:
+programh0001 - Handshaking Lemma and Interesting Tree Properties
+programh0002 - Enumeration of Binary Tree
+programh0003 - Tree Traversals
+programh0004 - BFS vs DFS for Binary Tree
+programh0005 - Level Order Tree Traversal
+programh0006 - Diameter of a Binary Tree
+programh0007 - Inorder Tree Traversal without Recursion
+programh0008 - Inorder Tree Traversal without recursion and without stack!
+programh0009 - Threaded Binary Tree
+programh0010 - Maximum Depth or Height of a Tree
+programh0011 - If you are given two traversal sequences, can you construct the binary tree?
+programh0012 - Clone a Binary Tree with Random Pointers
+programh0013 - Construct Tree from given Inorder and Preorder traversals
+programh0014 - Maximum width of a binary tree
+programh0015 - Print nodes at k distance from root
+programh0016 - Print Ancestors of a given node in Binary Tree
+programh0017 - Check if a binary tree is subtree of another binary tree
+programh0018 - Connect nodes at same level
+programh0019 - Search and Insert in BST
+programh0020 - Deletion from BST
+programh0021 - Minimum value in a Binary Search Tree
+programh0022 - Inorder predecessor and successor for a given key in BST
+programh0023 - Check if a binary tree is BST or not
+programh0024 - Lowest Common Ancestor in a Binary Search Tree.
+programh0025 - Inorder Successor in Binary Search Tree
+programh0026 - Find k-th smallest element in BST (Order Statistics in BST)
+programh0027 - Merge two BSTs with limited extra space
+programh0028 - Two nodes of a BST are swapped, correct the BST
+programh0029 - Floor and Ceil from a BST
+programh0030 - In-place conversion of Sorted DLL to Balanced BST
+programh0031 - Find a pair with given sum in a Balanced BST
+programh0032 - Total number of possible Binary Search Trees with n keys
+programh0033 - Merge Two Balanced Binary Search Trees
+programh0034 - Binary Tree to Binary Search Tree Conversion
+programh0035 - Binary Heap
+programh0036 - Binomial Heap
+programh0037 - Fibonacci Heap
+programh0038 - Heap Sort
+programh0039 - K’th Largest Element in an array
+programh0040 - Sort an almost sorted array/
+programh0041 - Tournament Tree (Winner Tree) and Binary Heap
+programh0042 - Separate Chaining for Collision Handling
+programh0043 - Open Addressing for Collision Handling
+programh0044 - Print a Binary Tree in Vertical Order
+programh0045 - Find whether an array is subset of another array
+programh0046 - Union and Intersection of two Linked Lists
+programh0047 - Find a pair with given sum
+programh0048 - Check if a given array contains duplicate elements within k distance from each other
+programh0049 - Find Itinerary from a given list of tickets
+programh0050 - Find number of Employees Under every Employee
+
+--> Graph:
+programi0001 - Breadth First Traversal for a Graph
+programi0002 - Depth First Traversal for a Graph
+programi0003 - Detect Cycle in a Directed Graph
+programi0004 - Detect Cycle in a an Undirected Graph
+programi0005 - Detect cycle in an undirected graph
+programi0006 - Longest Path in a Directed Acyclic Graph
+programi0007 - Topological Sorting
+programi0008 - Check whether a given graph is Bipartite or not
+programi0009 - Snake and Ladder Problem
+    Minimize Cash Flow among a given set of friends who have borrowed money from each other
+    Boggle (Find all possible words in a board of characters)
+    Assign directions to edges so that the directed graph remains acyclic
+Prim’s Minimum Spanning Tree (MST))
+    Applications of Minimum Spanning Tree Problem
+    Prim’s MST for Adjacency List Representation
+    Kruskal’s Minimum Spanning Tree Algorithm
+    Boruvka’s algorithm for Minimum Spanning Tree
+Dijkstra’s shortest path algorithm
+    Dijkstra’s Algorithm for Adjacency List Representation
+    Bellman–Ford Algorithm
+    Floyd Warshall Algorithm
+    Johnson’s algorithm for All-pairs shortest paths
+    Shortest Path in Directed Acyclic Graph
+    Some interesting shortest path questions,
+    Shortest path with exactly k edges in a directed and weighted graph
+Find if there is a path between two vertices in a directed graph
+    Connectivity in a directed graph
+    Articulation Points (or Cut Vertices) in a Graph
+    Biconnected graph
+    Bridges in a graph
+    Eulerian path and circuit
+    Fleury’s Algorithm for printing Eulerian Path or Circuit
+    Strongly Connected Components
+    Transitive closure of a graph
+    Find the number of islands
+    Count all possible walks from a source to a destination with exactly k edges
+    Euler Circuit in a Directed Graph
+    Biconnected Components
+    Check if a given graph is tree or not
+    Karger’s algorithm for Minimum Cut 
+Graph Coloring (Introduction and Applications)
+    Greedy Algorithm for Graph Coloring
+    Travelling Salesman Problem (Naive and Dynamic Programming)
+    Travelling Salesman Problem (Approximate using MST)
+    Hamiltonian Cycle
+    Vertex Cover Problem | Set 1 (Introduction and Approximate Algorithm)
+    K Centers Problem | Set 1 (Greedy Approximate Algorithm)
+Ford-Fulkerson Algorithm for Maximum Flow Problem
+    Find maximum number of edge disjoint paths between two vertices
+    Find minimum s-t cut in a flow network
+    Maximum Bipartite Matching
+    Channel Assignment Problem
+
+Advanced Data Structure:
+Memory efficient doubly linked list
+    XOR Linked List – A Memory Efficient Doubly Linked List | Set 1
+    XOR Linked List – A Memory Efficient Doubly Linked List | Set 2
+    Skip List | Set 1 (Introduction)
+    Self Organizing List | Set 1 (Introduction)
+Trie | (Insert and Search)
+    Trie | (Delete)
+    Longest prefix matching – A Trie based solution in Java
+    Print unique rows in a given boolean matrix
+    How to Implement Reverse DNS Look Up Cache?
+    How to Implement Forward DNS Look Up Cache?
+    Suffix Array nLogn Algorithm
+    Suffix Tree Introduction
+    Ukkonen’s Suffix Tree Construction – Part 1
+    Ukkonen’s Suffix Tree Construction – Part 2
+    Ukkonen’s Suffix Tree Construction – Part 3
+    Ukkonen’s Suffix Tree Construction – Part 4,
+    Ukkonen’s Suffix Tree Construction – Part 5
+    Ukkonen’s Suffix Tree Construction – Part 6
+    Generalized Suffix Tree
+    Build Linear Time Suffix Array using Suffix Tree
+    Substring Check
+    Searching All Patterns
+    Longest Repeated Substring,
+    Longest Common Substring, Longest Palindromic Substring
+    AVL Tree | Set 1 (Insertion)
+    AVL Tree | Set 2 (Deletion)
+    AVL with duplicate keys
+    Splay Tree | Set 1 (Search)
+    Splay Tree | Set 2 (Insert)
+    B-Tree | Set 1 (Introduction)
+    B-Tree | Set 2 (Insert)
+    B-Tree | Set 3 (Delete)
+    Segment Tree | Set 1 (Sum of given range)
+    Segment Tree | Set 2 (Range Minimum Query)
+    Lazy Propagation in Segment Tree
+    Red-Black Tree Introduction
+    Red Black Tree Insertion.
+    Red-Black Tree Deletion
+    Program for Red Black Tree Insertion
+    KD Tree (Search and Insert)
+    K D Tree (Find Minimum)
+    K D Tree (Delete)
+    Treap (A Randomized Binary Search Tree)
+    Ternary Search Tree
+    Interval Tree
+    Implement LRU Cache
+    Sort numbers stored on different machines
+    Find the k most frequent words from a file
+    Given a sequence of words, print all anagrams together
+    Tournament Tree (Winner Tree) and Binary Heap
+    Decision Trees – Fake (Counterfeit) Coin Puzzle (12 Coin Puzzle)
+    Spaghetti Stack
+    Data Structure for Dictionary and Spell Checker?
+    Binary Indexed Tree
+
+--> Array:
+    Given an array A[] and a number x, check for pair in A[] with sum as x
+    Majority Element
+    Find the Number Occurring Odd Number of Times
+    Largest Sum Contiguous Subarray
+    Find the Missing Number
+    Search an element in a sorted and pivoted array
+    Merge an array of size n into another array of size m+n
+    Median of two sorted arrays
+    Write a program to reverse an array
+    Program for array rotation
+    Reversal algorithm for array rotation
+    Block swap algorithm for array rotation
+    Maximum sum such that no two elements are adjacent
+    Leaders in an array
+    Sort elements by frequency | Set 1
+    Count Inversions in an array
+    Two elements whose sum is closest to zero
+    Find the smallest and second smallest element in an array
+    Check for Majority Element in a sorted array
+    Maximum and minimum of an array using minimum number of comparisons
+    Segregate 0s and 1s in an array
+    k largest(or smallest) elements in an array | added Min Heap method
+    Maximum difference between two elements
+    Union and Intersection of two sorted arrays
+    Floor and Ceiling in a sorted array
+    A Product Array Puzzle
+    Segregate Even and Odd numbers
+    Find the two repeating elements in a given array
+    Sort an array of 0s, 1s and 2s
+    Find the Minimum length Unsorted Subarray, sorting which makes the complete array sorted
+    Find duplicates in O(n) time and O(1) extra space
+    Equilibrium index of an array
+    Linked List vs Array
+    Which sorting algorithm makes minimum number of memory writes?
+    Turn an image by 90 degree
+    Next Greater Element
+    Check if array elements are consecutive | Added Method 3
+    Find the smallest missing number
+    Count the number of occurrences in a sorted array
+    Interpolation search vs Binary search
+    Given an array arr[], find the maximum j – i such that arr[j] > arr[i]
+    Maximum of all subarrays of size k (Added a O(n) method)
+    Find whether an array is subset of another array | Added Method 3
+    Find the minimum distance between two numbers
+    Find the repeating and the missing | Added 3 new methods
+    Median in a stream of integers (running integers)
+    Find a Fixed Point in a given array
+    Maximum Length Bitonic Subarray
+    Find the maximum element in an array which is first increasing and then decreasing
+    Count smaller elements on right side
+    Minimum number of jumps to reach end
+    Implement two stacks in an array
+    Find subarray with given sum
+    Dynamic Programming | Set 14 (Maximum Sum Increasing Subsequence)
+    Longest Monotonically Increasing Subsequence Size (N log N)
+    Find a triplet that sum to a given value
+    Find the smallest positive number missing from an unsorted array
+    Find the two numbers with odd occurrences in an unsorted array
+    The Celebrity Problem
+    Dynamic Programming | Set 15 (Longest Bitonic Subsequence)
+    Find a sorted subsequence of size 3 in linear time
+    Largest subarray with equal number of 0s and 1s
+    Dynamic Programming | Set 18 (Partition problem)
+    Maximum Product Subarray
+    Find a pair with the given difference
+    Replace every element with the next greatest
+    Dynamic Programming | Set 20 (Maximum Length Chain of Pairs)
+    Find four elements that sum to a given value | Set 1 (n^3 solution)
+    Find four elements that sum to a given value | Set 2 ( O(n^2Logn) Solution)
+    Sort a nearly sorted (or K sorted) array
+    Maximum circular subarray sum
+    Find the row with maximum number of 1s
+    Median of two sorted arrays of different sizes
+    Shuffle a given array
+    Count the number of possible triangles
+    Iterative Quick Sort
+    Find the number of islands
+    Construction of Longest Monotonically Increasing Subsequence (N log N)
+    Find the first circular tour that visits all petrol pumps
+    Arrange given numbers to form the biggest number
+    Pancake sorting
+    A Pancake Sorting Problem
+    Tug of War
+    Divide and Conquer | Set 3 (Maximum Subarray Sum)
+    Counting Sort
+    Merge Overlapping Intervals
+    Find the maximum repeating number in O(n) time and O(1) extra space
+    Stock Buy Sell to Maximize Profit
+    Rearrange positive and negative numbers in O(n) time and O(1) extra space
+    Sort elements by frequency | Set 2
+    Find a peak element
+    Print all possible combinations of r elements in a given array of size n
+    Given an array of of size n and a number k, find all elements that appear more than n/k times
+    Find the point where a monotonically increasing function becomes positive first time
+    Find the Increasing subsequence of length three with maximum product
+    Find the minimum element in a sorted and rotated array
+    Stable Marriage Problem
+    Merge k sorted arrays | Set 1
+    Radix Sort
+    Move all zeroes to end of array
+    Find number of pairs such that x^y > y^x
+    Count all distinct pairs with difference equal to k
+    Find if there is a subarray with 0 sum
+    Smallest subarray with sum greater than a given value
+    Sort an array according to the order defined by another array
+    Maximum Sum Path in Two Arrays
+    Check if a given array contains duplicate elements within k distance from each other
+    Sort an array in wave form
+    K’th Smallest/Largest Element in Unsorted Array
+    K’th Smallest/Largest Element in Unsorted Array in Expected Linear Time
+    K’th Smallest/Largest Element in Unsorted Array in Worst Case Linear Time
+    Find Index of 0 to be replaced with 1 to get longest continuous sequence of 1s in a binary array
+    Find the closest pair from two sorted arrays
+    Given a sorted array and a number x, find the pair in array whose sum is closest to x
+    Count 1’s in a sorted binary array
+    Print All Distinct Elements of a given integer array
+    Construct an array from its pair-sum array
+    Find common elements in three sorted arrays
+    Find the first repeating element in an array of integers
+    Find the smallest positive integer value that cannot be represented as sum of any subset of a given array
+    Rearrange an array such that ‘arr[j]’ becomes ‘i’ if ‘arr[i]’ is ‘j’
+    Find position of an element in a sorted array of infinite numbers
+    Can QuickSort be implemented in O(nLogn) worst case time complexity?
+    Check if a given array contains duplicate elements within k distance from each other
+    Find the element that appears once
+    Replace every array element by multiplication of previous and next
+    Check if any two intervals overlap among a given set of intervals
+    Delete an element from array (Using two traversals and one traversal)
+    Given a sorted array and a number x, find the pair in array whose sum is closest to x
+    Find the largest pair sum in an unsorted array
+    Online algorithm for checking palindrome in a stream
+    Find Union and Intersection of two unsorted arrays
+    Pythagorean Triplet in an array
+    Maximum profit by buying and selling a share at most twice
+
+--> Matrix:
+    Search in a row wise and column wise sorted matrix
+    Print a given matrix in spiral form
+    A Boolean Matrix Question
+    Print unique rows in a given boolean matrix
+    Maximum size square sub-matrix with all 1s
+    Print unique rows in a given boolean matrix
+    Inplace M x N size matrix transpose | Updated
+    Print Matrix Diagonally
+    Dynamic Programming | Set 27 (Maximum sum rectangle in a 2D matrix)
+    Strassen’s Matrix Multiplication
+    Create a matrix with alternating rectangles of O and X
+    Find the row with maximum number of 1s
+    Print all elements in sorted order from row and column wise sorted matrix
+    Given an n x n square matrix, find sum of all sub-squares of size k x k
+    Count number of islands where every island is row-wise and column-wise separated
+    Find a common element in all rows of a given row-wise sorted matrix
+    Given a matrix of ‘O’ and ‘X’, replace ‘O’ with ‘X’ if surrounded by ‘X’
+    Find the longest path in a matrix with given constraints
+    Given a Boolean Matrix, find k such that all elements in k’th row are 0 and k’th column are 1.
+    Find the largest rectangle of 1’s with swapping of columns allowed
+    Validity of a given Tic-Tac-Toe board configuration
+    Minimum Initial Points to Reach Destination
+    Find length of the longest consecutive path from a given starting character
+    Collect maximum points in a grid using two traversals
+    Rotate Matrix Elements
+    Find sum of all elements in a matrix except the elements in row and/or column of given cell?
+    Find a common element in all rows of a given row-wise sorted matrix
 
