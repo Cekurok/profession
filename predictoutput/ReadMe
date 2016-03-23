@@ -1,0 +1,10 @@
+--> cpp
+- when a static member is declared inside class it has to be defined outside to
+  allocate memory for the static variable. when it is not defined and when we 
+  tried to access it then it throws compilation error.
+- only const static member can be initialized inside a class.
+- const static member initialized inside a class do not need definition.
+- the order of constructor called will be in the order of their derivation if 
+derived class derives base 2 and base 1, then base 2, base 1 and derived 
+class constructor are called. The destructor will be called in reverse order.
+

@@ -30,7 +30,8 @@ int Test::i;
 
 int main()
 {
-    cout << "sizeof(Test) = " << sizeof(Test) << endl;
-    cout << "Test::i      = " << Test::i << endl;
-    return 0;
+  Test::i = 5;
+  cout << "sizeof Test = " << sizeof(Test) << endl;
+  cout << "Test::i     = " << Test::i << endl;
+  return 0;
 }

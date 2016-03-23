@@ -41,7 +41,6 @@
     B b(10);
     g(b);
     g(20);
-    getchar();
     return 0;
   } 
 
