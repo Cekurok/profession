@@ -79,7 +79,10 @@ sudo apt-get install gdb
 #valgrind
 sudo apt-get install valgrind
 
-#
+# Red Note book journal
+sudo add-apt-repository ppa:rednotebook/stable
+sudo apt-get update
+sudo apt-get install rednotebook
 
 16. ubuntu default screen and text colour of terminal 
 background : 48 10 36

@@ -485,36 +485,382 @@ D. Stopping: Stopping and continuing
 	ignore [bnum count]
 
   --> Break Commands: Breakpoint command lists
+  commands [range...]
+  ... command-list ...
+  end
+
   --> Dynamic Printf: Dynamic printf
+  dprintf location,template,expression[,expression...]
+  set dprintf-style style
+  gdb
+  call
+  agent
+  set dprintf-function function
+  set dprintf-channel channel
+  set disconnected-dprintf on
+  set disconnected-dprintf off
+  show disconnected-dprintf off
+
   --> Save Breakpoints: How to save breakpoints in a file
+  save breakpoints [filename]
+
   --> Static Probe Points: Listing static probe points
+  SystemTap
+  DTrace
+  info probes [type] [provider [name [objfile]]]
+  info probes all
+  enable probes [provider [name [objfile]]]
+  disable probes [provider [name [objfile]]]
+
   --> Error in Breakpoints: ``Cannot insert breakpoints''
+
   --> Breakpoint-related Warnings: ``Breakpoint address adjusted...'' 
 
   02. Continuing and Stepping: Resuming execution
+  continue [ignore-count]
+  c [ignore-count]
+  fg [ignore-count]
+  step
+  step count
+  next [count]
+  set step-mode
+  set step-mode on
+  set step-mode off
+  show step-mode
+  finish
+  until
+  u
+  until location
+  u location
+  advance location
+  stepi
+  stepi arg
+  si
+  nexti
+  nexti arg
+  ni
+  set range-stepping
+  show range-stepping 
+
   03. Skipping Over Functions and Files Skipping over functions and files
+  skip [options]
+  -file file
+  -fi file
+  -gfile file-glob-pattern
+  -gfi file-glob-pattern
+  -function linespec
+  -fu linespec
+  -rfunction regexp
+  -rfu regexp
+
+  skip function [linespec]
+  skip file [filename]
+  
+  info skip [range]
+  Identifier
+  Enabled or Disabled
+  Glob
+  File
+  RE
+  Function
+
+  skip delete [range]
+  skip enable [range]
+  skip disable [range]
+
   04. Signals: Signals
+  info signals
+  info handle
+  info signals sig
+  catch signal [signal... | ‘all’]
+  
+  handle signal [keywords...]
+  nostop
+  stop
+  print
+  noprint
+  pass
+  noignore
+  nopass
+  ignore
+
   05. Thread Stops: Stopping and starting multi-thread programs 
+  --> All-Stop Mode: All threads stop when GDB takes control
+  set scheduler-locking mode
+  show scheduler-locking
+  set schedule-multiple
+  show schedule-multiple
+
+  --> Non-Stop Mode: Other threads continue to execute
+  set non-stop on
+  set non-stop off
+  show non-stop
+
+  --> Background Execution: Running your program asynchronously
+  run
+  attach
+  step
+  stepi
+  next
+  nexti
+  continue
+  finish
+  until
+  interrupt
+  interrupt -a
+
+  --> Thread-Specific Breakpoints: Controlling breakpoints
+  break location thread thread-id
+  break location thread thread-id if ...
+
+  --> Interrupted System Calls: GDB may interfere with system calls
+
+  --> Observer Mode: GDB does not alter program behavior 
+  set observer on
+  set observer off
+  show observer
+  set may-write-registers on
+  set may-write-registers off
+  show may-write-registers
+  set may-write-memory on
+  set may-write-memory off
+  show may-write-memory
+  set may-insert-breakpoints on
+  set may-insert-breakpoints off
+  show may-insert-breakpoints
+  set may-insert-tracepoints on
+  set may-insert-tracepoints off
+  show may-insert-tracepoints
+  set may-insert-fast-tracepoints on
+  set may-insert-fast-tracepoints off
+  show may-insert-fast-tracepoints
+  set may-interrupt on
+  set may-interrupt off
+  show may-interrupt
   
 E. Reverse Execution: Running programs backward
+reverse-continue [ignore-count]
+rc [ignore-count]
+reverse-step [count]
+reverse-stepi [count]
+reverse-next [count]
+reverse-nexti [count]
+reverse-finish
+set exec-direction
+set exec-direction reverse
+set exec-direction forward
+
 
 F. Process Record and Replay: Recording inferior's execution and replaying it
+record method
+full
+btrace format
+bts
+pt
+
+record stop
+
+record goto
+record goto begin
+record goto start
+record goto end
+record goto n
+
+record save filename
+record restore filename
+set record full insn-number-max limit
+set record full insn-number-max unlimited
+show record full insn-number-max
+set record full stop-at-limit
+show record full stop-at-limit
+set record full memory-query
+show record full memory-query
+set record btrace replay-memory-access
+show record btrace replay-memory-access
+set record btrace bts buffer-size size
+set record btrace bts buffer-size unlimited
+show record btrace bts buffer-size size
+set record btrace pt buffer-size size
+set record btrace pt buffer-size unlimited
+show record btrace pt buffer-size size
+
+info record
+full
+btrace
+
+record delete
+
+record instruction-history
+record instruction-history insn
+record instruction-history insn, +/-n
+record instruction-history
+record instruction-history -
+record instruction-history begin, end
+
+set record instruction-history-size size
+set record instruction-history-size unlimited
+show record instruction-history-size
+
+record function-call-history
+record function-call-history func
+record function-call-history func, +/-n
+record function-call-history
+record function-call-history -
+record function-call-history begin, end
+
+set record function-call-history-size size
+set record function-call-history-size unlimited
+show record function-call-history-size
 
 G. Stack: Examining the stack
   01. Frames: Stack frames
+
   02. Backtrace: Backtraces
+  backtrace
+  bt
+  backtrace n
+  bt n
+  backtrace -n
+  bt -n
+  backtrace full
+  bt full
+  bt full n
+  bt full -n
+  backtrace no-filters
+  bt no-filters
+  bt no-filters n
+  bt no-filters -n
+  bt no-filters full
+  bt no-filters full n
+  bt no-filters full -n
+  set backtrace past-main
+  set backtrace past-main on
+  set backtrace past-main off
+  show backtrace past-main
+  set backtrace past-entry
+  set backtrace past-entry on
+  set backtrace past-entry off
+  show backtrace past-entry
+  set backtrace limit n
+  set backtrace limit 0
+  set backtrace limit unlimited
+  show backtrace limit
+  set filename-display
+  set filename-display relative
+  set filename-display basename
+  set filename-display absolute
+  show filename-display
+
   03. Selection: Selecting a frame
+  frame n
+  f n
+  frame stack-addr [ pc-addr ]
+  f stack-addr [ pc-addr ]
+  up n
+  down n
+  select-frame
+  up-silently n
+  down-silently n
+
   04. Frame Info: Information on a frame
+  frame
+  f
+  info frame
+  info f
+  info frame addr
+  info f addr
+  info args
+  info locals
+
   05. Frame Filter Management: Managing frame filters 
+  info frame-filter
+  disable frame-filter filter-dictionary filter-name
+  enable frame-filter filter-dictionary filter-name
+  set frame-filter priority filter-dictionary filter-name priority
+  show frame-filter priority filter-dictionary filter-name
   
 H. Source: Examining source files
   01. List: Printing source lines
+  list linenum
+  list function
+  list
+  list -
+  set listsize count
+  set listsize unlimited
+  show listsize
+  list location
+  list first,last
+  list ,last
+  list first,
+  list +
+  list -
+  list
   02. Specify Location: How to specify code locations
+  --> Linespec Locations: Linespec locations
+  linenum
+  -offset
+  +offset
+  filename:linenum
+  function
+  function:label
+  filename:function
+  label
+  -pstap|-probe-stap [objfile:[provider:]]name
+
+
+  --> Explicit Locations: Explicit locations
+  -source filename
+  -function function
+  -label label
+  -line number
+
+  --> Address Locations: Address locations 
+  expression
+  funcaddr
+  'filename':funcaddr
+
   03. Edit: Editing source files
+  edit location
+  edit number
+  edit function
+
+  EDITOR=/usr/bin/vi
+  export EDITOR
+  gdb ...
+
+  setenv EDITOR /usr/bin/vi
+  gdb ...
+
   04. Search: Searching source files
+  forward-search regexp
+  search regexp
+  reverse-search regexp
+
   05. Source Path: Specifying source directories
-  06. Machine Code: Source and machine code 
+  directory dirname ...
+  dir dirname ...
+  directory
+  set directories path-list
+  show directories
+  set substitute-path from to
+  unset substitute-path [path]
+  show substitute-path [path]
   
+  06. Machine Code: Source and machine code 
+  info line location
+
+  disassemble
+  disassemble /m
+  disassemble /s
+  disassemble /r
+  start,end
+  start,+length
+
+  set disassembly-flavor instruction-set
+  show disassembly-flavor
+  set disassemble-next-line
+  show disassemble-next-line
+
 I. Data: Examining data
 
 J. Optimized Code: Debugging optimized code

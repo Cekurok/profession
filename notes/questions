@@ -101,7 +101,47 @@ connected if the subnet mask is 255.255.255.224
 mask will you use?
 04. 
 
-
+--> Answers
+           Network ID        Host ID
+          --------------------------------------
+class A - |0XXXXXXX |XXXXXXXX XXXXXXXX XXXXXXXX|
+          --------------------------------------
+Total IP  - 2^31
+Network   - 2^7
+Host      - 2^24
+IP Range  - 1 to 126
+          
+               Network ID          Host ID
+          --------------------------------------
+class B - |10XXXXXX XXXXXXXX |XXXXXXXX XXXXXXXX|
+          --------------------------------------
+Total IP  - 2^30	  
+Network   - 2^14
+Host      - 2^16
+IP Range  - 128 to 191
+          
+           Network ID                   Host ID
+          --------------------------------------
+class C - |110XXXXX XXXXXXXX XXXXXXXX |XXXXXXXX|
+          --------------------------------------
+Total IP  - 2^29	  
+Network   - 2^21
+Host      - 2^8
+IP Range  - 192 to 223
+          
+                         
+          -------------------------------------
+class D - |1110XXXX XXXXXXXX XXXXXXXX XXXXXXXX|
+          -------------------------------------
+Total IP  - 2^28	  
+IP Range  - 224 to 239
+          
+                         
+          -------------------------------------
+class E - |1111XXXX XXXXXXXX XXXXXXXX XXXXXXXX|
+          -------------------------------------
+Total IP  - 2^28
+IP Range  - 240 to 255
 
 **********************************************************************
                          general programs
