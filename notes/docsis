@@ -437,9 +437,80 @@ TR-106a5   --> Data Model Template for TR-069-Enabled Devices Amendment 5
 WI-FI MGMT --> Wi-Fi Provisioning Framework Specification
 
 *****************************************************************
-Palestine: Peace Not Apartheid
-The General's Son - Miko Peled
+                         Wifi 802.11
 *****************************************************************
+--> IEEE 802.11 
+- 802.11 ratified in 1997
+-- first 802.11 standard also known as 802.11 prime
+IEEE standard Wireless LAN Media Access Control(MAC) and Physical Layer
+(PHY) Specification
+-- Speed 1 & 2 Mbps
+-- Frequency bandwidth 2.4 GHz
+
+- 802.11 a ratified in 1999
+-- Orthogonal Frequency Division Multiplexing(OFDM) in 5 Ghz band
+-- Speed - 6 to 54 Mbps
+-- Frequency - 5 GHz 
+
+- 802.11 b ratified in 1999
+-- High Rate Direct-Sequence Spread Spectrum(DSSS) in 2.4 Ghz
+-- Speed - 5 to 11 Mbps
+-- Frequency - 2.4 GHz
+
+- 802.11 g ratified in 2003
+-- Higher Rate Extension in 2.4 Ghz
+-- Speed - Upto 54 Mbps
+-- Frequency - 2.4 GHz
+
+- 802.11 n ratified in 2009
+-- Speed upto 600 Mbps
+-- Frequency 2.4 GHz and 5 GHz
+-- PHY feature 
+--- Multiple Inpute, Multiple Output (MIMO) allowing upto 4 antenna
+--- Space-Time Block Coding(STBC)
+--- Channel bonding
+--- Frame aggregation
+
+- 802.11 ac ratified in 2014
+-- Speed upto 1300 Mbps
+-- Frequency - 5GHz
+
+--> Networks
+- Physical Components
+-- Physical components includes
+1. Stations
+2. Access Points
+3. Wireless Medium
+4. Wide Area Network
+1. Stations
+- also known as wireless clients, are devices with wireless interface
+
+2. Access Points (AP)
+- devices(transceivers) that typically connects wireless devices to 
+an ethernet wired local area network
+- AP does not have firewall functions
+
+3. Wireless Medium
+- transmission of waves in various carrier frequencies that is expressed in 
+cycles per second
+- radio wave, microwave and infrared
+
+4. Wide Area Network
+
+- Types of Networks
+1. Basic Service Set(BSS)
+2. Extended Service Set(ESS)
+
+1. BSS
+- BSS is one Access Point that is wired to a network on one end and connected
+with a set of wireless client devices on the other
+
+2. ESS
+ESS is two or more inter-connected BSS 
+- Joining a Network
+
+- Security and Encryption
+
 *****************************************************************
 *****************************************************************
 

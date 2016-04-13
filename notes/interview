@@ -46,6 +46,252 @@ int main()
     return 0;
 }
 
+--> Function Overloading in C++
+1. Function overloading
+#include <iostream>
+using namespace std;
+ 
+void print(int i) {
+  cout << " Here is int " << i << endl;
+}
+void print(double  f) {
+  cout << " Here is float " << f << endl;
+}
+void print(char* c) {
+  cout << " Here is char* " << c << endl;
+}
+ 
+int main() {
+  print(10);
+  print(10.10);
+  print("ten");
+  return 0;
+}
+
+2. Function overloading and const keyword
+#include<iostream>
+using namespace std;
+ 
+class Test
+{
+protected:
+    int x;
+public:
+    Test (int i):x(i) { }
+    void fun() const
+    {
+        cout << "fun() const called " << endl;
+    }
+    void fun()
+    {
+        cout << "fun() called " << endl;
+    }
+};
+ 
+int main()
+{
+    Test t1 (10);
+    const Test t2 (20);
+    t1.fun();
+    t2.fun();
+    return 0;
+}
+
+--> Default Arguments in C++
+#include<iostream>
+using namespace std;
+ 
+// A function with default arguments, it can be called with 
+// 2 arguments or 3 arguments or 4 arguments.
+int sum(int x, int y, int z=0, int w=0)
+{
+    return (x + y + z + w);
+}
+ 
+/* Drier program to test above function*/
+int main()
+{
+    cout << sum(10, 15) << endl;
+    cout << sum(10, 15, 25) << endl;
+    cout << sum(10, 15, 25, 30) << endl;
+    return 0;
+}
+
+--> static member functions in C++
+1) static member functions do not have this pointer.
+#include<iostream>
+class Test {      
+   static Test * fun() {
+     return this; // compiler error
+   }
+};
+  
+int main()
+{
+   getchar();
+   return 0;
+}
+
+2. A static member function cannot be virtual
+
+3. Member function declarations with the same name and the name 
+parameter-type-list cannot be overloaded if any of them is a static member 
+function declaration.
+#include<iostream>
+class Test {
+   static void fun() {}
+   void fun() {} // compiler error
+};
+  
+int main()
+{
+   getchar();
+   return 0;
+}
+
+4. A static member function can not be declared const, volatile, or const 
+volatile.
+#include<iostream>
+class Test {      
+   static void fun() const { // compiler error
+     return;
+   }
+};
+  
+int main()
+{
+   getchar();
+   return 0;
+}
+
+
+--> Static data members in C++
+1. If we add definition of a, the program will works fine and will call 
+A’s constructor. 
+#include <iostream>
+using namespace std;
+ 
+class A
+{
+    int x;
+public:
+    A() { cout << "A's constructor called " << endl;  }
+};
+ 
+class B
+{
+    static A a;
+public:
+    B() { cout << "B's constructor called " << endl; }
+    static A getA() { return a; }
+};
+ 
+A B::a;  // definition of a
+ 
+int main()
+{
+    B b1, b2, b3;
+    A a = b1.getA();
+ 
+    return 0;
+}
+
+--> ‘this’ Pointer
+1. When local variable’s name is same as member’s name
+#include<iostream>
+using namespace std;
+ 
+/* local variable is same as a member's name */
+class Test
+{
+private:
+   int x;
+public:
+   void setX (int x)
+   {
+       // The 'this' pointer is used to retrieve the object's x
+       // hidden by the local variable 'x'
+       this->x = x;
+   }
+   void print() { cout << "x = " << x << endl; }
+};
+ 
+int main()
+{
+   Test obj;
+   int x = 20;
+   obj.setX(x);
+   obj.print();
+   return 0;
+}
+
+2. To return reference to the calling object
+/* Reference to the calling object can be returned */
+Test& Test::func ()
+{
+   // Some processing
+   return *this;
+} 
+
+3. When a reference to a local object is returned, the returned reference can be
+used to chain function calls on a single object.
+#include<iostream>
+using namespace std;
+ 
+class Test
+{
+private:
+  int x;
+  int y;
+public:
+  Test(int x = 0, int y = 0) { this->x = x; this->y = y; }
+  Test &setX(int a) { x = a; return *this; }
+  Test &setY(int b) { y = b; return *this; }
+  void print() { cout << "x = " << x << " y = " << y << endl; }
+};
+ 
+int main()
+{
+  Test obj1(5, 5);
+ 
+  // Chained function calls.  All calls modify the same object
+  // as the same object is returned by reference
+  obj1.setX(10).setY(20);
+ 
+  obj1.print();
+  return 0;
+}
+
+4. Type of ‘this’ pointer in C++
+Code 1
+#include<iostream>
+class X {
+   void fun() const {
+    // this is passed as hidden argument to fun(). 
+    // Type of this is const X* 
+    }
+};
+
+Code 2
+#include<iostream>
+class X {
+   void fun() volatile {
+     // this is passed as hidden argument to fun(). 
+     // Type of this is volatile X* 
+    }
+};
+
+Code 3
+#include<iostream>
+class X {
+   void fun() const volatile {
+     // this is passed as hidden argument to fun(). 
+     // Type of this is const volatile X* 
+    }
+};
+
+
+
 --> Templates in C++
 1. Function Templates
 
