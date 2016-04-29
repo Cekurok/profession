@@ -1,3 +1,12 @@
+--> setting environment for downloading the code
+mkdir profession
+cd profession
+git init .
+git pull https://github.com/rangaeeeee/profession.git
+git pull --all
+git pull 
+git branch --set-upstream-to=origin/office
+
 --> if u get this error
 rajendiran@rajendiran-X550LC:~/git/profession$ git push -u origin home-test 
 fatal: 'origin' does not appear to be a git repository
