@@ -1,12 +1,15 @@
 SIP - Overview
---> SIP is a signalling protocol used to create, modify, and terminate a multimedia session over the Internet Protocol.
+--> SIP is a signalling protocol used to create, modify, and terminate a 
+multimedia session over the Internet Protocol.
 
 ************************************************************
 SIP - Network Elements
 1. User Agent
 --> An endpoint can initiate, modify, or terminate a session.
- a. User Agent Client (UAC) - The entity that sends a request and receives a response.
- b. User Agent Server (UAS) - The entity that receives a request and sends a response.
+ a. User Agent Client (UAC) - The entity that sends a request and 
+ receives a response.
+ b. User Agent Server (UAS) - The entity that receives a request and 
+ sends a response.
 
 2. Proxy Server
 -->  takes a request from a user agent and forwards it to another user.

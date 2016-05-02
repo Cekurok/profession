@@ -35,7 +35,9 @@ when same static variable name is declared in many function with same name
 09. size of derived class when base class private members
 10. copy constructor
 11. deep and shallow copy
-
+12. what is use of static member function in a class
+13. why static member function cannot be const or volatile
+14. 
 
 
 

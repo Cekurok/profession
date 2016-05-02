@@ -1,7 +1,9 @@
 **********************************************************************
                     C++
 **********************************************************************
+**************************************************************
 --> References in C++
+**************************************************************
 1. When a variable is declared as reference, it becomes an alternative name for 
 an existing variable. A variable can be declared as reference by putting ‘&’ in 
 the declaration. 
@@ -46,7 +48,100 @@ int main()
     return 0;
 }
 
+3. When do we pass arguments by reference or pointer?
+a) To modify local variables of the caller function: 
+void fun(int &x) {
+    x = 20;
+}
+ 
+int main() {
+    int x = 10;
+    fun(x);
+    cout<<"New value of x is "<<x;
+    return 0;
+}
+
+b) For passing large sized arguments: 
+class Employee {
+private:
+    string name;
+    string desig;
+ 
+    // More attributes and operations
+};
+void printEmpDetails(const Employee &emp) {
+     cout<<emp.getName();
+     cout<<emp.getDesig();
+ 
+    // Print more attributes 
+}
+
+c)To avoid Object Slicing:
+#include <iostream>
+#include<string>
+ 
+using namespace std;
+ 
+class Pet {
+public:
+    virtual string getDescription() const {
+        return "This is Pet class";
+    }
+};
+ 
+class Dog : public Pet {
+public:
+    virtual string getDescription() const {
+        return "This is Dog class";
+    }
+};
+ 
+void describe(const Pet &p) { // Doesn't slice the derived class object.
+//void describe(Pet p) { // Slices the derived class object
+    cout<<p.getDescription()<<endl;
+}
+ 
+int main() {
+    Dog d;
+    describe(d);
+    return 0;
+}
+
+d) To achieve Run Time Polymorphism in a function
+#include<iostream>
+using namespace std;
+ 
+class base {
+public:
+    virtual void show() {  // Note the virtual keyword here
+        cout<<"In base \n";
+    }
+};
+ 
+ 
+class derived: public base {
+public:
+    void show() {
+        cout<<"In derived \n";
+    }
+};
+ 
+// Since we pass b as reference, we achieve run time polymorphism here.
+void print(base &b) {
+    b.show();
+}
+ 
+int main(void) {
+    base b;
+    derived d;
+    print(b);
+    print(d);
+    return 0;
+}
+
+**************************************************************
 --> Function Overloading in C++
+**************************************************************
 1. Function overloading
 #include <iostream>
 using namespace std;
@@ -97,7 +192,43 @@ int main()
     return 0;
 }
 
+3. In C++ and Java, functions can not be overloaded if they differ only in 
+the return type. 
+
+4. Overloading doesn’t work for derived class in C++ programming language. 
+#include <iostream>
+using namespace std;
+class Base
+{
+public:
+    int f(int i)
+    {
+        cout << "f(int): ";
+        return i+3;
+    }
+};
+class Derived : public Base
+{
+public:
+    double f(double d)
+    {
+        cout << "f(double): ";
+        return d+3.3;
+    }
+};
+int main()
+{
+    Derived* dp = new Derived;
+    cout << dp->f(3) << '\n';
+    cout << dp->f(3.3) << '\n';
+    delete dp;
+    return 0;
+}
+
+**************************************************************
 --> Default Arguments in C++
+**************************************************************
+
 #include<iostream>
 using namespace std;
  
@@ -117,7 +248,54 @@ int main()
     return 0;
 }
 
+**************************************************************
+--> Inline Functions in C++
+**************************************************************
+inline return-type function-name(parameters)
+{
+    // function code
+}  
+
+Compiler may not perform inlining in such circumstances like:
+1) If a function contains a loop. (for, while, do-while)
+2) If a function contains static variables.
+3) If a function is recursive.
+4) If a function return type is other than void, and the return statement 
+doesn’t exist in function body.
+5) If a function contains switch or goto statement.
+
+Inline functions provide following advantages:
+1) Function call overhead doesn’t occur.
+2) It also saves the overhead of push/pop variables on the stack when function 
+is called.
+3) It also saves overhead of a return call from a function.
+4) When you inline a function, you may enable compiler to perform context 
+specific optimization on the body of function.
+5) Inline function may be useful (if it is small) for embedded systems because 
+inline can yield less code than the function call preamble and return.
+
+Inline function disadvantages:
+1) The added variables from the inlined function consumes additional registers
+2) binary executable file will be large
+3) reduce your instruction cache hit rate
+4) may increase compile time overhead if someone changes the code inside the 
+inline function
+5) Inline functions might cause thrashing because inlining might increase size 
+of the binary executable file. Thrashing in memory causes performance of 
+computer to degrade.
+
+**************************************************************
+--> new and delete in C++
+**************************************************************
+1) new calls constructors, while malloc() does not. 
+2) new is an operator, while malloc() is a fucntion.
+3) new returns exact data type, while malloc() returns void *.
+4) In C++, delete,new operator pairs and free(), malloc() are used as pairs
+5) delete or free can used for a NULL pointer. 
+
+**************************************************************
 --> static member functions in C++
+**************************************************************
 1) static member functions do not have this pointer.
 #include<iostream>
 class Test {      
@@ -164,8 +342,9 @@ int main()
    return 0;
 }
 
-
+***************************************************************
 --> Static data members in C++
+***************************************************************
 1. If we add definition of a, the program will works fine and will call 
 A’s constructor. 
 #include <iostream>
@@ -186,17 +365,23 @@ public:
     static A getA() { return a; }
 };
  
-A B::a;  // definition of a
+A B::a;  // definition of a and if this is commented it will give 
+//compilation error.
  
 int main()
 {
     B b1, b2, b3;
     A a = b1.getA();
+
+// static member 'a' is accessed without any object of B
+    a = B::getA();
  
     return 0;
 }
 
+***************************************************************
 --> ‘this’ Pointer
+***************************************************************
 1. When local variable’s name is same as member’s name
 #include<iostream>
 using namespace std;
