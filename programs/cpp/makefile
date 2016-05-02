@@ -4,7 +4,9 @@ SRC = src
 INC = inc
 CC = g++
 
-all : binary-tree vector-test array-test deque-test forward-list-test list-test map-test queue-test set-test stack-test unordered-map-test unordered-set-test
+all : compile doxygen
+
+compile : binary-tree vector-test array-test deque-test forward-list-test list-test map-test queue-test set-test stack-test unordered-map-test unordered-set-test
 	@echo "Build completed - C Plus Plus Project"
 
 vector-test : vector-test.o
@@ -58,4 +60,10 @@ binary-tree.o : $(SRC/binary-tree.cpp) $(INC)/binary-tree.h
 .PHONY: clean
 clean : 
 	rm -f binary-tree vector-test array-test deque-test forward-list-test list-test map-test queue-test set-test stack-test unordered-map-test unordered-set-test *.o
+	rm -rf docs
 	@echo "Clean up completed - C Plus Plus Project"
+
+.PHONY : doxygen
+doxygen :
+	doxygen config
+

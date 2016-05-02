@@ -4,7 +4,9 @@ SRC = src
 INC = inc
 CC = cc
 
-all : main geeksforgeeks
+all : compile doxygen
+
+compile : main geeksforgeeks
 	@echo "Build completed - Geeks for Geeks Project"
 
 main : main.o
@@ -19,5 +21,11 @@ main.o : $(SRC)/main.c $(INC)/main.h
 
 .PHONY: clean
 clean :
-	rm -f main geeksforgeeks *.o  
+	rm -f main geeksforgeeks *.o
+	rm -rf docs  
 	@echo "Clean up completed - Geeks for Geeks Project"
+
+.PHONY : doxygen
+doxygen :
+	doxygen config
+

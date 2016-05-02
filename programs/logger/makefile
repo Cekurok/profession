@@ -7,18 +7,18 @@ CC = cc
 all : compile doxygen
 
 compile : main
-	@echo "Build completed - Code Chef Project"
+	@echo "Build completed - Logger Project"
 
 main : main.o
 
-main.o : $(SRC/main.c) $(INC)/main.h
+main.o : $(SRC)/main.c $(INC)/main.h
 	$(CC) $(CFLAGS) $(SRC)/main.c
 
 .PHONY: clean
 clean : 
-	rm -f main *.o  
+	rm -f main *.o
 	rm -rf docs
-	@echo "Clean up completed - Code Chef Project"
+	@echo "Clean up completed - Logger Project"
 
 .PHONY : doxygen
 doxygen :

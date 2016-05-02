@@ -129,7 +129,7 @@ Some of the template for doxygen
 /**
  * \file   file.cpp
  * \author Rangarajan R 
- * \date   March, 2016
+ * \date   May, 2016
  * \brief  
  *   Predict the output.
  *
@@ -140,10 +140,11 @@ Some of the template for doxygen
  *   The notes for this file.
  *
  * \copyright
- *   No part of this should be published in any form without the author permission
+ *   No part of this should be published in any form without the author 
+ *   permission
  */
  
- #ifdef __cplusplus
+#ifdef __cplusplus
 extern "C" {
 #endif
 

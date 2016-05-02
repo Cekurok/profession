@@ -4,7 +4,9 @@ SRC = src
 INC = inc
 CC = cc -pthread
 
-all : main entry-system exit-system
+all : compile doxygen
+
+compile : main entry-system exit-system
 	@echo "Build completed - Car Parking Project"
 
 main : main.o
@@ -23,4 +25,10 @@ exit-system.o : $(SRC)/exit-system.c $(INC)/exit-system.h
 .PHONY: clean
 clean :
 	rm -f *.o main entry-system exit-system
+	rm -rf docs
 	@echo "Clean up completed - Car Parking Project"
+
+.PHONY : doxygen
+doxygen :
+	doxygen config
+

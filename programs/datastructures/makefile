@@ -6,7 +6,9 @@ INC = inc
 CXX = g++
 CC = $(CXX)
 
-all : linked-list circular-linked-list queue doubly-linked-list stack binary-tree binary-search-tree heap hashing \
+all : compile doxygen
+
+compile : linked-list circular-linked-list queue doubly-linked-list stack binary-tree binary-search-tree heap hashing \
       graph hello-world
 	@echo "Build completed - Data Structure Project"
 linked-list : linked-list.o 
@@ -57,4 +59,9 @@ hello-world.o : $(SRC)/hello-world.cpp
 .PHONY: clean
 clean : 
 	rm -f *.o  hello-world graph hashing heap binary-search-tree binary-tree stack doubly-linked-list queue circular-linked-list linked-list
+	rm -rf docs
 	@echo "Clean up completed - Data Structure Project"
+
+.PHONY : doxygen
+doxygen :
+	doxygen config

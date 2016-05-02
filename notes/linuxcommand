@@ -1,3 +1,10 @@
+--> to uninstall vmware workstation
+sudo  vmware-installer -u vmware-workstation
+
+--> to uninstall vmware player
+sudo vmware-installer -u vmware-player
+
+
 1. How redirect the output to file
 $ program [arguments...] 2>&1 | tee outfile
 

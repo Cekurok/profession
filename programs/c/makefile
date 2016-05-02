@@ -5,7 +5,9 @@ INC = inc
 CC = cc
 TARGETS = main pointer file test
 
-all : $(TARGETS) 
+all : compile doxygen
+
+compile : $(TARGETS) 
 	@echo "Build completed - C Project"
 
 main : main.o
@@ -28,4 +30,10 @@ test.o : $(SRC/test.c) $(INC)/test.h
 .PHONY: clean
 clean : 
 	rm -f $(TARGETS) *.o  
+	rm -rf docs
 	@echo "Clean up completed - C Project"
+
+.PHONY : doxygen
+doxygen :
+	doxygen config
+

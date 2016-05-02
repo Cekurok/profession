@@ -4,7 +4,9 @@ SRC = src
 INC = inc
 CC = cc -pthread
 
-all : program-01 program-02 process ipc-pipes ipc-semaphore \
+all : compile doxygen
+
+compile : program-01 program-02 process ipc-pipes ipc-semaphore \
 ipc-sharedmemory ipc-socket ipc-mappedmemory
 	@echo "Build Done - Linux Project"
 
@@ -45,4 +47,10 @@ ipc-mappedmemory.o : $(SRC)/ipc-mappedmemory.c $(INC)/ipc-mappedmemory.h
 clean : 
 	rm -f *.o  program-01 program-02 process ipc-pipes ipc-semaphore \
 	ipc-sharedmemory ipc-socket ipc-mappedmemory
+	rm -rf docs
 	@echo "Clean up done - Linux Project"
+
+.PHONY : doxygen
+doxygen :
+	doxygen config
+

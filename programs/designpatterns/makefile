@@ -5,7 +5,9 @@ CXXFLAGS = -Wall -g -c
 CXX = g++
 CC = $(CXX)
 
-all : abstract-factory adapter bridge builder chain-of-responsibility command composite decorator facade factory-weight fly-weight interpreter iterator mediator memento observer prototype proxy singleton state strategy template-method visitor
+all : compile doxygen
+
+compile : abstract-factory adapter bridge builder chain-of-responsibility command composite decorator facade factory-weight fly-weight interpreter iterator mediator memento observer prototype proxy singleton state strategy template-method visitor
 	@echo "Build completed - Design Pattern Project"
 
 abstract-factory : abstract-factory.o
@@ -109,4 +111,10 @@ visitor.o : $(SRC)/visitor.cpp $(INC)/visitor.h
 
 clean : 
 	rm -f abstract-factory adapter bridge builder chain-of-responsibility command composite decorator facade factory-weight fly-weight interpreter iterator mediator memento observer prototype proxy singleton state strategy template-method visitor *.o
+	rm -rf docs
 	@echo "Clean up completed - Design Patterns Project"
+
+.PHONY : doxygen
+doxygen :
+	doxygen config
+

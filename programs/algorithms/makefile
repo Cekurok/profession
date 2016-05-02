@@ -4,8 +4,10 @@ SRC = src
 INC = inc
 CC = cc
 
-all : main
+all : compile doxygen
 	@echo "Build completed - Algorithms Project"
+
+compile : main
 
 main : main.o
 
@@ -15,4 +17,10 @@ main.o : $(SRC)/main.c $(INC)/main.h
 .PHONY: clean
 clean : 
 	rm -f main *.o
+	rm -rf docs
 	@echo "Clean up completed - Algorithms Project"
+
+.PHONY : doxygen
+doxygen :
+	doxygen config
+
