@@ -1,5 +1,5 @@
 #Makefile to compile all the files for C Programming by Dennis Ritchie
-CXXFLAGS = -Wall -g -c 
+CXXFLAGS = -Wall -Wextra -O2 -g -c 
 SRC = src
 INC = inc
 CC = cc

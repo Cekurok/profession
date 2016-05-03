@@ -1,5 +1,5 @@
 # Makefile to all the design pattern programs
-CXXFLAGS = -Wall -g -c -DDEBUG
+CXXFLAGS = -Wall -Wextra -O2 -g -c -DDEBUG
 SRC = src
 INC = inc
 CC = cc -pthread

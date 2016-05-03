@@ -1,5 +1,5 @@
 # Makefile to all the design pattern programs
-CFLAGS = -Wall -g -c
+CFLAGS = -Wall -Wextra -O2 -g -c
 SRC = src
 INC = inc
 CC = g++

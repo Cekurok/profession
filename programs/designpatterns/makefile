@@ -1,7 +1,7 @@
 # Makefile to compile the design pattern
 SRC = src
 INC = inc
-CXXFLAGS = -Wall -g -c 
+CXXFLAGS = -Wall -Wextra -O2 -g -c 
 CXX = g++
 CC = $(CXX)
 

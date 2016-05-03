@@ -1,3 +1,28 @@
+--> to revert back the changes in modified but yet staged
+git checkout <file-name>
+
+--> If you added it to the index already, use reset:
+git reset <file-name>
+
+--> If you had committed it, then you use the revert command:
+# the -n means, do not commit the revert yet
+git revert -n <sha1>
+# now make sure we are just going to commit the revert to file-name
+git reset <file-name>
+git commit
+
+--> If on the other hand, you had committed it, but the commit involved rather a lot
+of files that you do not also want to revert, then the above method might
+involve a lot of "reset <file-name>" commands. In this case, you might like to use this
+method:
+# revert, but do not commit yet
+git revert -n <sha1>
+# clean all the changes from the index
+git reset
+# now just add file-name
+git add <file-name>
+git commit
+
 --> setting environment for downloading the code
 mkdir profession
 cd profession
