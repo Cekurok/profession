@@ -1,4 +1,23 @@
 Important note
+
+******************************************************************
+to compile code inside vim editor
+******************************************************************
+- to compile the code 
+: make
+
+- to open the window with compiler output
+: cope
+
+- to close the window
+: clo
+
+- to move to next error
+: cn
+
+- to move to previous error
+: cp
+
 # command mode
 *******************************************************************
 			Basic Editing
