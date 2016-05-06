@@ -1,0 +1,40 @@
+Krish just finished reading about rectangles, and he has learned how to compute the area of a rectangle. However, he doesn't know whether his answer is correct.
+He needs your help! Write a class that computes the area of a rectangle.
+
+Create two classes: "Rectangle" and "RectangleArea" with the following 
+specifications:
+Class1: Rectangle
+Member1: width
+Member2: height
+Method1: Display(), to display the dimensions of rectangle.
+Class2: RectangleArea, derived from class Rectangle.
+Method1: Input(), to read the width and height of a rectangle.
+Method2: Display(), overloaded function to display the area of rectangle.
+
+Input Format
+
+The first and only line of input contains two space separated integers denoting 
+the width and height of the rectangle.
+
+Constraints
+1<=width<=100.1<=width<=100.
+1<=height<=100.1<=height<=100.
+
+Output Format
+
+In the first line, print the width and height of the rectangle with a single 
+space in between.
+In the next line, print the area of the rectangle.
+
+Sample Input
+
+10 5
+
+Sample Output
+
+10 5
+50
+
+Explanation
+
+Area of rectangle is calculated as: width*height = 10*5 = 50.
