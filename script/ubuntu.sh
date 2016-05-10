@@ -34,4 +34,7 @@ sudo apt-get install libstdc++-5-doc
 #  liblsan0-dbg libtsan0-dbg libubsan0-dbg libcilkrts5-dbg libmpx0-dbg
 #  libquadmath0-dbg libstdc++-5-doc
 
-
+# Abiword to convert pdf to word document
+sudo apt-get install abiword
+#Then perform the conversion:
+#abiword --to=doc example.pdf
