@@ -35,16 +35,22 @@ using namespace std;
   };
 
 
-void ReversePrint(Node *head)
+Node* Reverse(Node *head)
 {
- // Complete this method
-
- if(head == NULL)
-     return ;
-
- ReversePrint(head->next);
- cout << head->data << endl;
-
+  // Complete this method
+    Node *prev,*curr,*next,*temp;
+    temp = head;
+    prev = NULL;
+    curr = head;
+    
+    while(curr != NULL) {        
+        next = curr->next;
+        curr->next = prev;
+        prev = curr;
+        curr = next;
+    }
+    
+    return prev;
 }
 
 
