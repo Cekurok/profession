@@ -30,7 +30,8 @@ git init .
 git pull https://github.com/rangaeeeee/profession.git
 git pull --all
 git pull 
-git branch --set-upstream-to=origin/office
+git push --set-upstream origin <branch name>
+git branch --set-upstream-to=origin/<branch name>
 
 --> if u get this error
 rajendiran@rajendiran-X550LC:~/git/profession$ git push -u origin home-test 
