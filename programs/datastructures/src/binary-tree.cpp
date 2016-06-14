@@ -4,15 +4,9 @@
 
 using namespace std;
 
-
-Node::Node(int x){
-  key =x;
-  left = NULL;
-  right = NULL;
- }
-
+#if 0
 /* Function to line by line print level order traversal a tree*/
-void BinaryTree::printLevelOrder(Node* root)
+void BinaryTree::printLevelOrder(vector<Node> *root)
 {
     int h = maxDepth(root);
     int i;
@@ -178,10 +172,11 @@ int BinaryTree::identicalTrees(Node* a, Node* b)
     /* 3. one empty, one not -> false */
     return 0;
 } 
-
+#endif 0
 int main(void) {
  int choice;
  int subChoice = 0;
+#if 0
  BinaryTree *tree = new BinaryTree(1);
  tree->root = new Node(1);
  tree->root->left = new Node(2);
@@ -229,7 +224,7 @@ int main(void) {
  tree2->root->right->right->left = new Node(12);
  tree2->root->right->right->right = new Node(13);
  tree2->root->right->right->left->left = new Node(14);
-
+#endif
  do { 
  cout << endl << endl << "***************** Enter your choice ******************" << endl << endl; 
  cout <<"0. Exit." << endl;
@@ -265,8 +260,6 @@ int main(void) {
    3. Traverse the right subtree, i.e., call Inorder(right-subtree)
          */
          case 1 :
-           tree->printLevelOrder(tree->root);
-           tree->printInOrder();
          break;
          case 2 :
          /*
@@ -275,7 +268,6 @@ int main(void) {
    2. Traverse the left subtree, i.e., call Preorder(left-subtree)
    3. Traverse the right subtree, i.e., call Preorder(right-subtree)
    */
-           tree->printPreOrder();
          break;
 /*
 Algorithm Postorder(tree)
@@ -284,7 +276,6 @@ Algorithm Postorder(tree)
    3. Visit the root.
 */         
          case 3 :
-	  tree->printPostOrder();
          break;
          default :
          cout << "Enter only the choice provided" << endl;
@@ -307,7 +298,6 @@ Algorithm Postorder(tree)
         (d) Return tree_size
       */
       case 2:
-      tree->printSize();
       break;
 
       /* Determine if two tree are identical*/
@@ -324,8 +314,6 @@ Algorithm Postorder(tree)
        3  Else return 0 (one is empty and other is not)
        */
       case 3:
-      cout << "Trees identical : "<< ((tree->identicalTrees(tree->root,tree1->root)) ? "true" : "false")  << endl;
-      cout << "Trees identical : "<< ((tree->identicalTrees(tree->root,tree2->root)) ? "true" : "false")  << endl;
 
       break;
 
@@ -345,7 +333,6 @@ Algorithm Postorder(tree)
            (d) Return max_depth
       */
       case 4:
-      tree->maxDepth();
       break;
 
       /* 5. Delete a tree*/

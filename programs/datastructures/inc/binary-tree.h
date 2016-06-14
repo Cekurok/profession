@@ -1,24 +1,20 @@
 #ifndef __BINARYTREE_H__
 
 #define __BINARYTREE_H__
-
+#include <vector>
 using namespace std;
 
 
 
-class Node {
- public :
-  int key;
+struct Node {
+  int data;
   Node *left;
   Node *right;
-
-   Node(int x);
-   ~Node();
-   };
+};
 
 class BinaryTree{
  public :
-   Node *root;
+   vector <Node> *root;
 
    BinaryTree();
    BinaryTree(int key) ;

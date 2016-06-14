@@ -6,7 +6,7 @@ CC = g++
 
 all : compile doxygen
 
-compile : binary-tree vector-test array-test deque-test forward-list-test list-test map-test queue-test set-test stack-test unordered-map-test unordered-set-test
+compile : binary-tree vector-test array-test deque-test forward-list-test list-test map-test queue-test set-test stack-test unordered-map-test unordered-set-test big-integer
 	@echo "Build completed - C Plus Plus Project"
 
 vector-test : vector-test.o
@@ -57,9 +57,13 @@ binary-tree : binary-tree.o
 binary-tree.o : $(SRC/binary-tree.cpp) $(INC)/binary-tree.h
 	$(CC) $(CFLAGS) $(SRC)/binary-tree.cpp
 
+big-integer : big-integer.o
+big-integer.o : $(SRC/big-integer.cpp) $(INC)/big-integer.h
+	$(CC) $(CFLAGS) $(SRC)/big-integer.cpp
+
 .PHONY: clean
 clean : 
-	rm -f binary-tree vector-test array-test deque-test forward-list-test list-test map-test queue-test set-test stack-test unordered-map-test unordered-set-test *.o
+	rm -f binary-tree vector-test array-test deque-test forward-list-test list-test map-test queue-test set-test stack-test unordered-map-test unordered-set-test big-integer *.o
 	rm -rf docs
 	@echo "Clean up completed - C Plus Plus Project"
 

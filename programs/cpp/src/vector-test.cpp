@@ -168,16 +168,49 @@ bool printVector(vector<int> vec) {
 
 int main (void) {
     /* constructor */
-    vector <int> vec1 ;
-    vec1.push_back(1);
-    vec1.push_back(2);
-    vec1.push_back(3);
-    vec1.push_back(4);
-    vec1.push_back(5);
+    int choice = 1, subChoice = 1;
+    int temp = 0;
+
+    while(choice != 0){
+        cout <<" 1. Create a vector" << endl;
+        cout <<" 2. print the vector" << endl;
+        cout <<" 3. delete the vector" << endl;
+        cout <<" 4. exit" << endl;
+
+        cin >> subChoice;
+
+        vector <int> vec;
+
+        switch(subChoice){
+
+            case 1:
+            cout << "Enter the element of vector : " << endl;
+            while(!cin.eof()) {
+                cin >> temp;
+                vec.push_back(temp);
+            }
+            break;
+            
+            case 2:
+            cout << "The vector elements are : " << endl;
+            for(vector<int>::const_iterator it = vec.begin(); it != vec.end();
+            it++)
+            {
+                cout << *it << " ";
+            }
+
+            cout << endl;
+            break;
+
+            case 3:
+            break;
+
+            default :
+            cout <<" Enter only choice provide " << endl;
+        }
+    }
 
     cout << "inside vector program" << endl;
-
-    printVector(vec1);
 
     return 0;
 
