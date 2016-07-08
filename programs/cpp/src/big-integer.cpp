@@ -6,7 +6,10 @@
 #include <string>
 #include <sstream>
 #include <cmath>
+#include <vector>
 #define MAX 10000 // for strings
+
+#define debug 1
 
 using namespace std;
 class BigInteger {
@@ -30,6 +33,9 @@ public:
     bool operator < (BigInteger b);
     bool operator >= (BigInteger b);
     bool operator <= (BigInteger b);
+    BigInteger operator | (BigInteger b);
+    BigInteger operator & (BigInteger b);
+    BigInteger operator ^ (BigInteger b);
     BigInteger& operator ++(); // prefix
     BigInteger  operator ++(int); // postfix
     BigInteger& operator --(); // prefix
@@ -59,28 +65,397 @@ private:
     long long toInt(string s);
 };
 
+
+
 int main() {
     //Your Code Here
     
+#if debug    
+//    string str1 = "248986723471928718" ,str2 = "23284656882332294";
+string str1 = "123456789123456789" ,str2 = "1";
+ //   cout << " Num1 : ";
+ //   cin >> str1;
+ //   cout << " Num2 : ";
+ //   cin >> str2;
     
-    string str1,str2;
-    
-    cin >> str1;
-    cin >> str2;
-    
-    BigInteger a,b,c;
+    BigInteger a,b,c,d;
     a.setNumber(str1);
     b.setNumber(str2);
     
-    c = a+b;
+    c = a | b;
+    d = a & b;
     
-    cout << "a : " << a.getNumber() << endl;
-    cout << "b : " << b.getNumber() << endl;
-    cout << "a + b : " << c.getNumber() << endl;
+    cout << "Num1 : " << a.getNumber() << endl;
+    cout << "Num2 : " << b.getNumber() << endl;
+    cout << "Num1 | Num2 : " << c.getNumber() << endl;
+cout << "Num1 & Num2 : " << d.getNumber() << endl;
+#endif
     return 0;
 }
 
 //------------------------------------------------------------------------------
+//Ranga
+BigInteger BigInteger::operator |(BigInteger b) {
+stringstream ss;
+vector<bool> number1;
+vector<bool> number2;
+number1.clear();
+number2.clear();
+
+string zero = "0";
+string one  = "1";
+string two  = "2";
+#if debug 
+cout << " AND operator " << endl;
+cout << " *this : " << (*this).getNumber() << endl;
+cout << " b     : " << b.getNumber() << endl;
+BigInteger num1 ((*this).getNumber());
+BigInteger num2 (b.getNumber());
+/*for(int i = 0;i<num2.length(); i++){
+int temp1 = int(num1[i]) - (int)'0';
+int temp2 = int(num2[i]) - (int)'0';
+int temp = temp1 | temp2;
+  cout << " num2 str : " << num2[i] << " num2 int : " << temp << " char :"<< (char)temp<<  endl;
+
+ss << temp;
+}
+*/
+
+if(num1.getNumber() == zero)
+{
+number1.push_back(false);
+}
+else if(num1.getNumber() == one){
+number1.push_back(true);
+}
+if(num2.getNumber() == zero)
+{
+number2.push_back(false);
+}
+else if(num2.getNumber() == one){
+number2.push_back(true);
+}
+BigInteger bigTwo(two);
+while(num1.getNumber() != zero){
+if((num1 % bigTwo) == zero)
+number1.push_back(false);
+else
+number1.push_back(true);
+//cout << "number 1 : " << num1.getNumber() << endl;
+
+num1 = num1 / bigTwo;
+}
+while(num2.getNumber() != zero){
+if((num2 % bigTwo) == zero)
+number2.push_back(false);
+else
+number2.push_back(true);
+//cout << "number 2 : " << num1.getNumber() << endl;
+num2 = num2 / bigTwo;
+}
+
+//need to pad the lower size vector with zero for ANDing
+if(number1.size() > number2.size()){
+int diff = number1.size() - number2.size();
+
+for(int i = 1;i <= diff;i++){
+number2.push_back(false);
+}
+}
+else{
+int diff = number2.size() - number1.size();
+
+for(int i = 1;i <= diff;i++){
+number1.push_back(false);
+}
+}
+
+vector<bool> result;
+vector<bool>::iterator it1 = number1.begin();
+vector<bool>::iterator it2 = number2.begin();
+for(; it1 != number1.end(); it1++,it2++) {
+if(*it1 == false && *it2 == false)
+result.push_back(false);
+else
+result.push_back(true);
+}
+BigInteger finalValue(zero);
+BigInteger value(one);
+cout << "Bit value of OR result : ";
+for(vector<bool>::iterator it = result.begin(); it != result.end(); it++) {
+
+if(*it == true){
+finalValue += value;
+}
+#if debug 
+cout << *it;
+//cout << "finalValue : "<< finalValue.getNumber() << " value : " << value.getNumber() << endl;
+#endif
+value = value * bigTwo;
+}
+
+cout << endl;
+cout << "result : " << finalValue.getNumber() << endl;
+#endif
+
+
+return finalValue;
+}
+
+BigInteger BigInteger::operator &(BigInteger b) {
+stringstream ss;
+vector<bool> number1;
+vector<bool> number2;
+string zero = "0";
+string one  = "1";
+string two  = "2";
+#if debug 
+cout << " AND operator " << endl;
+cout << " *this : " << (*this).getNumber() << endl;
+cout << " b     : " << b.getNumber() << endl;
+BigInteger num1 ((*this).getNumber());
+BigInteger num2 (b.getNumber());
+/*for(int i = 0;i<num2.length(); i++){
+int temp1 = int(num1[i]) - (int)'0';
+
+int temp2 = int(num2[i]) - (int)'0';
+
+int temp = temp1 | temp2;
+
+  cout << " num2 str : " << num2[i] << " num2 int : " << temp << " char :"<< (char)temp<<  endl;
+
+ss << temp;
+}
+*/
+cout << "size of number 1 : " << number1.size() << endl;
+cout << "size of number 2 : " << number2.size() << endl;
+if(num1.getNumber() == zero)
+{
+number1.push_back(false);
+}
+else if(num1.getNumber() == one){
+number1.push_back(true);
+}
+if(num2.getNumber() == zero)
+{
+number2.push_back(false);
+}
+else if(num2.getNumber() == one){
+number2.push_back(true);
+}
+BigInteger bigTwo(two);
+cout << "size of number 1 : " << number1.size() << endl;
+cout << "size of number 2 : " << number2.size() << endl;
+while(num1.getNumber() != zero){
+if((num1 % bigTwo) == zero)
+number1.push_back(false);
+else
+number1.push_back(true);
+
+//cout << "number 1 : " << num1.getNumber() << endl;
+num1 = num1 / bigTwo;
+}
+while(num2.getNumber() != zero){
+if((num2 % bigTwo) == zero)
+number2.push_back(false);
+else
+number2.push_back(true);
+
+//cout << "number 2 : " << num1.getNumber() << endl;
+num2 = num2 / bigTwo;
+}
+
+//need to pad the lower size vector with zero for ANDing
+if(number1.size() > number2.size()){
+int diff = number1.size() - number2.size();
+
+for(int i = 1;i <= diff;i++){
+number2.push_back(false);
+}
+}
+else{
+int diff = number2.size() - number1.size();
+
+for(int i = 1;i <= diff;i++){
+number1.push_back(false);
+}
+}
+#if debug 
+cout << "Bit value of Num1 : ";
+for(vector<bool>::reverse_iterator it = number1.rbegin(); it != number1.rend(); it++) {
+cout << *it;
+}
+cout << endl;
+cout << "Bit value of Num2 : ";
+for(vector<bool>::reverse_iterator it = number2.rbegin(); it != number2.rend(); it++) {
+cout << *it;
+}
+cout << endl;
+#endif
+vector<bool> result;
+vector<bool>::iterator it1 = number1.begin();
+vector<bool>::iterator it2 = number2.begin();
+for(; it1 != number1.end(); it1++,it2++) {
+if(*it1 == true && *it2 == true)
+result.push_back(true);
+else
+result.push_back(false);
+}
+BigInteger finalValue(zero);
+BigInteger value(one);
+#if debug 
+cout << "Bit value of AND result : ";
+for(vector<bool>::reverse_iterator it = result.rbegin(); it != result.rend(); it++) {
+cout << *it;
+}
+#endif
+for(vector<bool>::iterator it = result.begin(); it != result.end(); it++) {
+
+if(*it == true){
+finalValue += value;
+}
+#if debug 
+//cout << *it;
+//cout << "finalValue : "<< finalValue.getNumber() << " value : " << value.getNumber() << endl;
+#endif
+value = value * bigTwo;
+}
+
+cout << endl;
+
+cout << "result : " << finalValue.getNumber() << endl;
+#endif
+
+number1.clear();
+number2.clear();
+return finalValue;
+
+}
+
+BigInteger BigInteger::operator ^(BigInteger b) {
+stringstream ss;
+vector<bool> number1;
+vector<bool> number2;
+string zero = "0";
+string one  = "1";
+string two  = "2";
+#if debug 
+cout << " AND operator " << endl;
+cout << " *this : " << (*this).getNumber() << endl;
+cout << " b     : " << b.getNumber() << endl;
+BigInteger num1 ((*this).getNumber());
+BigInteger num2 (b.getNumber());
+/*for(int i = 0;i<num2.length(); i++){
+int temp1 = int(num1[i]) - (int)'0';
+int temp2 = int(num2[i]) - (int)'0';
+int temp = temp1 | temp2;
+  cout << " num2 str : " << num2[i] << " num2 int : " << temp << " char :"<< (char)temp<<  endl;
+
+ss << temp;
+}
+*/
+cout << "size of number 1 : " << number1.size() << endl;
+cout << "size of number 2 : " << number2.size() << endl;
+if(num1.getNumber() == zero)
+{
+number1.push_back(false);
+}
+else if(num1.getNumber() == one){
+number1.push_back(true);
+}
+if(num2.getNumber() == zero)
+{
+number2.push_back(false);
+}
+else if(num2.getNumber() == one){
+number2.push_back(true);
+}
+BigInteger bigTwo(two);
+cout << "size of number 1 : " << number1.size() << endl;
+cout << "size of number 2 : " << number2.size() << endl;
+while(num1.getNumber() != zero){
+if((num1 % bigTwo) == zero)
+number1.push_back(false);
+else
+number1.push_back(true);
+
+//cout << "number 1 : " << num1.getNumber() << endl;
+num1 = num1 / bigTwo;
+}
+while(num2.getNumber() != zero){
+if((num2 % bigTwo) == zero)
+number2.push_back(false);
+else
+number2.push_back(true);
+
+//cout << "number 2 : " << num1.getNumber() << endl;
+num2 = num2 / bigTwo;
+}
+
+//need to pad the lower size vector with zero for ANDing
+if(number1.size() > number2.size()){
+int diff = number1.size() - number2.size();
+
+for(int i = 1;i <= diff;i++){
+number2.push_back(false);
+}
+}
+else{
+int diff = number2.size() - number1.size();
+
+for(int i = 1;i <= diff;i++){
+number1.push_back(false);
+}
+}
+#if debug 
+cout << "Bit value of Num1 : ";
+for(vector<bool>::reverse_iterator it = number1.rbegin(); it != number1.rend(); it++) {
+cout << *it;
+}
+cout << endl;
+cout << "Bit value of Num2 : ";
+for(vector<bool>::reverse_iterator it = number2.rbegin(); it != number2.rend(); it++) {
+cout << *it;
+}
+cout << endl;
+#endif
+vector<bool> result;
+vector<bool>::iterator it1 = number1.begin();
+vector<bool>::iterator it2 = number2.begin();
+for(; it1 != number1.end(); it1++,it2++) {
+if(*it1 =! *it2 )
+result.push_back(true);
+else
+result.push_back(false);
+}
+BigInteger finalValue(zero);
+BigInteger value(one);
+#if debug 
+cout << "Bit value of AND result : ";
+for(vector<bool>::reverse_iterator it = result.rbegin(); it != result.rend(); it++) {
+cout << *it;
+}
+#endif
+for(vector<bool>::iterator it = result.begin(); it != result.end(); it++) {
+
+if(*it == true){
+finalValue += value;
+}
+#if debug 
+//cout << *it;
+//cout << "finalValue : "<< finalValue.getNumber() << " value : " << value.getNumber() << endl;
+#endif
+value = value * bigTwo;
+}
+
+cout << endl;
+cout << "result : " << finalValue.getNumber() << endl;
+#endif
+
+number1.clear();
+number2.clear();
+return finalValue;
+}
 
 BigInteger::BigInteger() { // empty constructor initializes zero
     number = "0";
@@ -173,6 +548,7 @@ BigInteger& BigInteger::operator ++() { // prefix
     (*this) = (*this) + 1;
     return (*this);
 }
+
 
 BigInteger BigInteger::operator ++(int) { // postfix
     BigInteger before = (*this);

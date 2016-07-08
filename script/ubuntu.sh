@@ -38,3 +38,9 @@ sudo apt-get install libstdc++-5-doc
 sudo apt-get install abiword
 #Then perform the conversion:
 #abiword --to=doc example.pdf
+
+# to install dia for UML diagrams
+sudo apt-get install dia
+
+# to install qemu for kernel and board emulator
+sudo apt-get install qemu
