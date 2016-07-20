@@ -1,31 +1,30 @@
-# Makefile to all the design pattern programs
-CFLAGS = -Wall -Wextra -O2 -g -c
-SRC = src
-INC = inc
-CC = cc
+SUB_DIRS         = $(wildcard */.)
+SUB_DIRS_ALL     = $(SUB_DIRS:%=all-%)
+SUB_DIRS_COMPILE = $(SUB_DIRS:%=compile-%)
+SUB_DIRS_CLEAN   = $(SUB_DIRS:%=clean-%)
+SUB_DIRS_DOXYGEN = $(SUB_DIRS:%=doxygen-%)
 
-all : compile doxygen
+#
+# Standard task
+#
 
-compile : main geeksforgeeks
-	@echo "Build completed - Geeks for Geeks Project"
+# This will call compile, doxygen tool
+all: $(SUB_DIRS_ALL)
 
-main : main.o
+compile : $(SUB_DIRS_COMPILE) 
 
-geeksforgeeks : geeksforgeeks.o
+clean: $(SUB_DIRS_CLEAN)
 
-geeksforgeeks.o : $(SRC)/geeksforgeeks.c $(INC)/geeksforgeeks.h
-	$(CC) $(CFLAGS) $(SRC)/geeksforgeeks.c
+doxygen : $(SUB_DIRS_DOXYGEN)
 
-main.o : $(SRC)/main.c $(INC)/main.h
-	$(CC) $(CFLAGS) $(SRC)/main.c
+$(SUB_DIRS_ALL):
+	@$(MAKE) $(MAKE_FLAGS) -C $(@:all-%=%)
 
-.PHONY: clean
-clean :
-	rm -f main geeksforgeeks *.o
-	rm -rf docs  
-	@echo "Clean up completed - Geeks for Geeks Project"
+$(SUB_DIRS_CLEAN):
+	@$(MAKE) $(MAKE_FLAGS) -C $(@:clean-%=%) clean
 
-.PHONY : doxygen
-doxygen :
-	doxygen config
+$(SUB_DIRS_DOXYGEN):
+	@$(MAKE) $(MAKE_FLAGS) -C $(@:doxygen-%=%) doxygen
 
+$(SUB_DIRS_COMPILE):
+	@$(MAKE) $(MAKE_FLAGS) -C $(@:compile-%=%) compile

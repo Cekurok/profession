@@ -1,0 +1,17 @@
+1. download the image writer from http://www.etcher.io/
+$ chmod a+x Etcher-linux-x64.AppImage
+
+2. download the prebuilt image from 
+$ wget https://rcn-ee.com/rootfs/2016-06-09/microsd/bone-ubuntu-16.04-console-armhf-2016-06-09-2gb.img.xz
+User: ubuntu pass: temppwd 
+
+3. to connect through ssh 
+ssh -X root@192.168.7.2
+
+4. to shutdown the beaglebone
+$ sudo shutdown -h now
+
+5. to reboot the beaglebone
+$ sudo reboot
+
+http://unix.stackexchange.com/questions/158581/beaglebone-black-doesnt-connect-via-ethernet-on-laptop

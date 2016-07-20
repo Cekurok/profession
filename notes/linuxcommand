@@ -41,7 +41,7 @@ $ sudo apt-get install vim
 --> to enable
 $ su -i
 --> set password to root account 
-$ passwd root
+$ sudo passwd root
 --> to disable root account
 $ sudo passwd -dl root
 --> to list the users account in the ubuntu
@@ -94,6 +94,91 @@ sudo apt-get install rednotebook
 16. ubuntu default screen and text colour of terminal 
 background : 48 10 36
 foreground : 255 255 255
+
+17. how to format disk in window
+a. Go to the windows start button, write diskpart and press "enter"
+
+b. Wait a few seconds and write on this order:
+  - "list disk" - shows you the disks that are currently connected to the
+    computer;
+  - "select disk X" - substitute x with the number of the disk
+  - "clean" - deletes all the data in the SD (you may have to remove and
+    reinsert the card after this step)
+  - "create partition primary" - creates a partition in the sd 
+  - "format quick" - makes a quick format
+
+c. You have just formatted your SD card! CONGRATULATIONS
+
+18. To compile and install the kernel
+a. download the kernel code from www.kernel.org
+
+b. extract the kernel package
+
+c. open a terminal and install necessary packages to compile kernel
+$ sudo apt-get install gcc libncurses5-dev dpkg-dev
+
+d. configure the linux kernel 
+go to the where it is extracted in step 2
+$ make menuconfig
+choose the 64-bit kernel and save and exit
+
+e. compile the kernel
+$ make -j 5 KDEB_PKVERSION=1.ubuntuNew deb-pkg
+
+f. install the kernel
+$ sudo dpkg -i ../linux*.deb
+
+g. reboot the machine
+$ sudo reboot
+
+h. to check the current kernel version
+$ uname -a 
+<>3.13.0 <>
+the above version is used in below command as linux-image-<kernel-version>
+
+i. unistall the kernel with the command 
+$ sudo apt-get purge linux-image-3.13.0 linux-image-3.13.0-dbg
+
+19. to compile the openwrt
+a. Install git , to conveniently download the OpenWrt source code, and build
+tools to do the cross-compilation process:
+$ sudo apt-get update
+$ sudo apt-get install git-core build-essential libssl-dev libncurses5-dev unzip gawk
+$ sudo apt-get install subversion mercurial
+
+b. Download the OpenWrt bleeding edge(trunk Version) with git
+$ git clone https://git.openwrt.org/openwrt.git
+
+c. clean the directory
+$ cd openwrt
+$ make clean
+$ make dirclean
+$ make distclean
+
+d. (optional) Download and install all available "feeds" (see OpenWrt Feeds for
+more options!):
+$ ./scripts/feeds update -a
+$ ./scripts/feeds install -a
+
+e. compile the code
+$ make menuconfig
+$ make -j 4 V=1
+
+20. if the terminal has a long path then make it point to only current dir 
+$ PS1="[\W]\\$ "
+
+
+************************************************************
+ubuntu server commands
+************************************************************
+--> to mount a device from terminal
+$ sudo fdisk --list
+$ sudo mount /dev/sdcard /mnt
+
+--> to change the font of the terminal
+$ sudo dpkg-reconfigure console-setup
+
+
 ************************************************************
 how to compile linux kernel
 ************************************************************
