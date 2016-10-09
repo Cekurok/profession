@@ -225,6 +225,13 @@ int main()
     return 0;
 }
 
+5. function that cannot be overloaded
+  a. function declaration that differs only in return type
+  b. Parameter declarations that differ only in a pointer * versus an array [] are equivalent. 
+		c. Member function declarations with the same name and the name parameter-type-list cannot be overloaded if any of them is a static member function declaration. 
+		d. Parameter declarations that differ only in that one is a function type and the other is a pointer to the same function type are equivalent.
+		e. Parameter declarations that differ only in the presence or absence of const and/or volatile are equivalent.
+		f. Two parameter declarations that differ only in their default arguments are equivalent.
 **************************************************************
 --> Default Arguments in C++
 **************************************************************

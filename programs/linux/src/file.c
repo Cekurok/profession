@@ -41,7 +41,7 @@ int main(int argc, char *argv[]) {
 
  printf("program name : %s\n",argv[0]);
 
- if(argc < 3) {
+ if(argc != 3 || strcmp(argv[1],"--help") || strcmp(argv[1],"-h")) {
   perror(" usage <input file> <output file>\n");
   abort();
  }

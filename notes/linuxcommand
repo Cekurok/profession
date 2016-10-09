@@ -167,7 +167,12 @@ $ make -j 4 V=1
 20. if the terminal has a long path then make it point to only current dir 
 $ PS1="[\W]\\$ "
 
-
+21. to trim the long dir path in terminal
+export PS1="\u \$(pwd) > "
+export PS1="\u > "
+PS1="\w>"
+PS1="[\W]\\$ "
+PS1='\h \W $ '
 ************************************************************
 ubuntu server commands
 ************************************************************
