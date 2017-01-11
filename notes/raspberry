@@ -1,0 +1,33 @@
+1. Flash the image on the SD card
+  - Run df -h to see what devices are currently mounted.
+  - Run df -h again. The new device that has appeared is your SD card. The left column gives the device name of your SD card; it will be listed as something like /dev/mmcblk0p1 or /dev/sdd1. The last part (p1 or 1 respectively) is the partition number but you want to write to the whole SD card, not just one partition. You therefore need to remove that part from the name, getting, for example, /dev/mmcblk0 or /dev/sdd as the device name for the whole SD card.
+  - Run umount /dev/sdd1, replacing sdd1 with whatever your SD card's device name is (including the partition number).
+  - Make sure the device name is the name of the whole SD card as described above, not just a partition of it; for example, sdd, not sdds1 or sddp1, and mmcblk0, not mmcblk0p1.
+$ dd bs=4M if=2016-09-23-raspbian-jessie.img of=/dev/mmcblk0
+
+
+2. connect raspberry pi through ethernet
+  - create a VPN connection 
+  - interface is ethernet and in the ipv4 settings --> method "Share to other computers"
+  $ cat /var/lib/misc/dnsmasq.leases 
+  $ ssh pi@10.42.0.154
+  - password raspberry
+  $ cat /proc/cpuinfo
+  $ sudo shutdown -h now
+
+3. install vnc viewer and server 
+  $ sudo apt-get install tightvncserver
+  $ sudo apt-get install xtightvncviewer
+  $ sudo apt-get install remmina
+  
+4. start the vncserver in raspberry pi
+  $ tightvncserver
+
+5. configuring the vnc client using remmina
+  $ sudo remmina
+  - protocol : "Virtual Network Computing"
+  - server   : 10.42.0.154:1
+  - username : pi
+  - password : raspberrry
+ 
+
